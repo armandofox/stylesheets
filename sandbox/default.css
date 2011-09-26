@@ -797,7 +797,6 @@ fieldset#admin_form {
   /* border: 1px solid #ccc;*/
   border: 1px solid rgb(137,25,18);
   border: 1px solid rgba(137,25,18,0.5);
-  color: rgb(137,25,18,0.85);
   color: rgba(137,25,18,0.85);
 }
 #orderTotal {
