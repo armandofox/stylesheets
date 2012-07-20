@@ -1,9 +1,27 @@
-@import url('http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold') screen;
-@import url('http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911') screen;
+/* @override http://localhost:3000/stylesheets/venue/default.css?1277939720 */
 
 /* @override 
-	http://www.audience1st.com/custommade/stylesheets/venue/default.css?1316996661
-	https://www.audience1st.com/custommade/stylesheets/venue/default.css?1316996661
+	http://www.audience1st.com/custommade/stylesheets/venue/default.css?1275512265
+	http://localhost:3000/stylesheets/venue/default.css?1269303301
+	http://localhost:3000/stylesheets/venue/default.css?1268677795
+	http://localhost:3000/stylesheets/venue/default.css?1268333330
+	http://localhost:3000/stylesheets/venue/default.css?1268341073
+	http://localhost:3000/stylesheets/venue/default.css?1269304791
+	http://localhost:3000/stylesheets/venue/default.css?1269471239
+	http://localhost:3000/stylesheets/venue/default.css?1269491695
+	http://localhost:3000/stylesheets/venue/default.css?1269554108
+	http://192.168.15.101:3000/stylesheets/venue/default.css?1269555540
+	http://192.168.15.101:3000/stylesheets/venue/default.css?1269557599
+	http://localhost:3000/stylesheets/venue/default.css?1269557949
+	http://www.audience1st.com/custommade/stylesheets/venue/default.css?1275513708
+	https://www.audience1st.com/custommade/stylesheets/venue/default.css?1275786785
+*/
+
+/*
+  @file = default.css
+  @author =  Arthur Klepchukov
+  @modified = 02.10.2008
+  @for = Audience1st ticket-buying software
 */
 
 /* 
@@ -61,9 +79,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	line-height: 1;
 	color: black;
-	font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
-	background-color: white;
+	background-color: #eab634;
 }
 
 /* in testing or sandbox mode, body should look different */
@@ -73,43 +91,90 @@ body.testing {
 	margin: 4px;
 }
 
+#outer_wrapper {
+	padding: 0;
+	width: 100%;
+	border: none;
+	background-color: #eab634;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	height: 100%;
+}
+
+#inner_wrapper {
+	width: 772px;
+	height: 100%;
+	align: center;
+	margin: 0 auto 0 auto;
+	background-color: white;
+	border: 1px solid black;
+	padding: 0;
+	overflow: hidden;
+	display: block;
+}
 
 .full_width {
 	width: 100%;
 }
 
 #header {
-	background-image: url('http://www.custommade.org/wp-content/uploads/2011/12/logo3-300x110.png');
-	background-attachment: fixed;
-	background-position: center 22px;
+	height: 91px;
+	width: 772px;
+	margin: 0;
+	padding: 0;
 	background-repeat: no-repeat;
-	height: 120px;
+	background-image: url('./custommade_banner.png');
+	border-bottom: 1px solid black;
 }
 
-#nav {
-	width: 100%;
+#header p#top_level_banner_text {
+	font-style: italic;
+	font-size: 9px;
+	text-align: right;
+	color: gray;
+	padding-left: 220px;
+	padding-right: 20px;
+	padding-top: 18px;
+}
+a#top_level_banner_link, a#top_level_banner_link:hover {
+        text-decoration: none;
 }
 
-#outer_wrapper {
-	min-width: 800px;
-}
-#right_main {
-	padding-right: 80px;
-}
-#content {
-	padding: 0 0 6px 70px;
-	margin-top: 0;
+#page_body {
 	
+}
+
+#left_sidebar {
+	background: url('side_banner.png') no-repeat;
+	display: block;
+	float: left;
+	width: 24px;
+	margin-bottom: -2000px;
+	padding-bottom: 2000px;
+	overflow: auto;
+}
+
+#right_main {
+	float: right;
+	width: 748px;
+	padding: 0 auto 0 auto;
+}
+
+#content {
+	padding: 0 0 6px 4px;
+	margin-top: 0;
+	overflow: scroll;
 }
 
 #footer {
 	margin: 0;
 	padding: 20px;
 	color: #ba0000;
-	background-color: #ddd;
 }
 
 #footer a {
+	color: white;
 	font-weight: bold;
 	text-decoration: underline;
 }
@@ -322,6 +387,7 @@ caption {
 
 strong, .strong {
 	font-weight: bold;
+	color: #ba0000;
 }
 
 em, .emphasis {
@@ -577,10 +643,9 @@ em, .emphasis {
  */
 
 #store_nav, #staff_nav {
+	float: left;
 	width: 100%;
 	list-style: none;
-	padding-left: 70px;
-	height: 60px;
 }
 
 #staff_nav {
@@ -589,33 +654,34 @@ em, .emphasis {
 }
 
 #store_nav {
-	width: 100%;
-	background-color: #d26666;
+	border-bottom: 3px double #999;
 }
 
 #store_nav li {
 	float: left;
-	border-right: 1px solid white;
-	border-top: 2px solid #CCC;
-
+	border-right: 1px solid #666;
 }
 
 #staff_nav li {
 	float: left;
-	border-right: 1px solid white;
+	border-right: 1px solid #666;
 	border-top: 2px solid #ccc;
+}
+
+#store_nav li {
+	border-top: 2px solid #CCC;
 }
 
 #store_nav li a, #staff_nav li a {
 	margin: 0;
 	padding: 0px 3px 3px 3px;
-	height: 55px;
 	display: block;
 	float: left;
+	font-variant: small-caps;
 	font-size: 10pt;
 	text-decoration: none;
-	color: white;
-	background-color: #d26666;
+	color: #222;
+	background-color: #eee;
 }
 
 #store_nav li a:hover, #staff_nav li a:hover {
@@ -640,7 +706,7 @@ body#vouchertypes_list				li#t_vouchertypes_list a,
 body#vouchertypes_edit				li#t_vouchertypes_list a,
 body#donation_list 					li#t_donation_list a {
 	background-color: white;
-	color: #d26666;
+	color: #ba0000;
 }
 
 /*
@@ -662,9 +728,9 @@ body#donation_list 					li#t_donation_list a {
 
 #welcome {
 	color: #787878;
-	padding-bottom: 8px;
-	font-style: italic;
-    font-family: 'Goudy Book 1911',Georgia,serif;}
+	padding: 5px;
+	font: italic 10pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
 
 #logged_in_welcome .button-to, #welcome .gen_button {
 	display: inline;
@@ -686,9 +752,7 @@ margin-left: 10px;
 /* Welcome banner */
 
 #welcome_header {
-	float: right;
-	position: relative;
-	bottom: 100px;
+	float: left;
 }
 
 #admin_welcome_header {
@@ -892,7 +956,6 @@ fieldset#admin_form {
 #ticket_menus label {
 	width: 200px;
 	padding-top: 0.7ex;
-	border-right: 3px solid #d26666;
 }
 
 #subscription_menus #enter_promo_code label {
@@ -918,8 +981,8 @@ fieldset#admin_form {
 	font-size: larger;
 	font-weight: bold;
 	vertical-align: bottom;
-	color: white;
-	background-color: #d26666;
+	color: red;
+	background-color: #eee;
 }
 
 #orderTotal input {
@@ -955,9 +1018,6 @@ fieldset#admin_form {
 	padding: 5px;
 	margin: 0;
 	text-align: center;
-	font-family: 'Goudy Book 1911',Georgia,serif;
-	font-size: 110%;
-	font-style: italic;
 }
 
 .storeBanner a {
