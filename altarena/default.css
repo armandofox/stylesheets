@@ -498,30 +498,21 @@ em, .emphasis {
    doing - it allows the UL environment to create horizontal tabs
  */
 
-#store_nav, #staff_nav {
+ul.nav {
   float: left;
   width: 900px;
   list-style: none;
-}
-#staff_nav {
-  margin-top: 12px;
+#  margin-top: 12px;
   border-bottom: 2px solid #ccc;
 }
-#store_nav {
-   border-bottom: 3px double #999;
-}
-#store_nav li {
-  float: left;
-  border-right: 1px solid #666;
-}
-#staff_nav li {
+ul.nav li {
+        font-size: larger;
         float:  left;
         border-right: 1px solid #666;
         border-top: 2px solid #ccc;
 }
-#store_nav li { border-top: 2px solid #CCC; }
 
-#store_nav li a, #staff_nav li a {
+ul.nav li a {
   margin: 0;
   padding: 10px 5px 3px 5px;
   display: block;
@@ -533,7 +524,7 @@ em, .emphasis {
   background-color: #eee;
 }
 
-#store_nav li a:hover, #staff_nav li a:hover {
+ul.nav li a:hover {
   background-color: #ccc;
 }
 

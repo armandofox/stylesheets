@@ -1,17 +1,6 @@
 /* @override 
-	http://localhost:3000/stylesheets/venue/default.css?1296781248
-	http://localhost:3000/stylesheets/venue/default.css?1259535241
-	http://localhost:3001/stylesheets/altarena.css?1215651123
-	http://localhost:3000/stylesheets/venue/default.css?1256579956
-	http://localhost:3000/stylesheets/venue/default.css?1259289257
-	http://localhost:3000/stylesheets/venue/default.css?1262387027
-	http://localhost:3000/stylesheets/venue/default.css?1262483118
-	http://localhost:3000/stylesheets/venue/default.css?1262483168
-	http://localhost:3000/stylesheets/venue/default.css?1269555313
-	http://localhost:3000/stylesheets/admin.css?1277960432
-	http://localhost:3000/stylesheets/venue/default.css?1297461316
-	http://localhost:3000/stylesheets/venue/default.css?1297461490
-	http://localhost:3000/stylesheets/venue/default.css?1297462003
+	http://localhost:3000/stylesheets/venue/default.css?1316979951
+	http://localhost:3000/stylesheets/venue/default.css?1342980421
 */
 
 /*
@@ -49,18 +38,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
         outline: 0;
 }
 body {
-        line-height: 1;
-        color: black;
+  color: #222;
   font-family: Candara, Helvetica, Arial, sans-serif ;
-  font-size: 9pt;
+  font-size: 10pt;
   color: #333;
-  background-color: #cbfe68;
+  background-image: url(./gradient_squares.png);
+  background-color: #838383;
 }
-/* in testing or sandbox mode, body should look different */
-body.testing {
-  margin: 0;
-	border: 4px double #407f09;
-}
+body.testing { border: none; }
 /* text links */
 a {
         text-decoration: none;
@@ -70,20 +55,19 @@ a:hover {
         text-decoration:  underline;
 }
 a.genButton {
-        background-color: #e6e6e6;
-        color: #407f09;
-        padding: 2px;
-        margin-bottom: 4px;
+        background-color: rgba(120,0,40,.3);
+        color: #780028;
+        padding: 4px 6px 4px 6px;
+        margin: 1ex;
         text-decoration: none;
-        border: 1px solid #407f09;
+        border: none;
 	font-weight: bold;
 }
 a.genButton:hover {
         text-decoration: none;
-        color: #800000;
-        background-color: white;
-        border:  1px solid #800000;
-        padding: 2px;
+        color: #222;
+        border:  1px solid #222;
+        padding: 4px 5px 4px 5px;
 }
 /* basic paragraphs and headers */
 p {
@@ -94,23 +78,23 @@ pre {
   font-family: Monaco,Courier,fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
-  font-weight: bold;
-  line-height: 1.4em;
-        color: #407f09;
-}
+
 h1 {
-  font-size: 1.8em;
-  margin: 10px 0;
+  font-size: 200%;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 1ex 1ex;
   padding: 0;
-  letter-spacing:  1pt;
+  color: whitesmoke;
+  background: rgba(120,0,40,.31);
 }
 h2 {
   font-size: 1.5em;
   margin: 6px 0;
   padding: 0;
   letter-spacing: 1pt;
+  color: #780028;
 }
 h3 {  font-size: 1.3em; }
 h4 {  font-size: 1.2em; }
@@ -122,23 +106,7 @@ h6 {  font-size: 1.0em; }
 ol, ul {
         list-style: none;
 }
-ul.horizontal_list {
-  float: left;
-  border-bottom: 2px solid black;
-  padding-bottom: 2px;
-  margin-bottom: 4px;
-}
-ul.horizontal_list li {
-  width: auto;
-  list-style: none;
-  float: left;
-  padding-left: 2px;
-  padding-right: 2px;
-  margin-left: 8px;
-  margin-right: 60px;
-  font-size: larger;
-  font-weight: bold;
-}
+
 
 /* tables still need 'cellspacing="0"' in the markup */
 table {
@@ -196,7 +164,6 @@ label {
   clear: left;
   width: 150px;
   text-align: right;
-  font-size: 0.9em;
 }
 
 thead {
@@ -208,7 +175,7 @@ th {
   padding: 3px;
   font-weight: bold;
   text-align: center;
-  background: #407f09;
+  background: #780028;
   color: #fff;
 }
 td {
@@ -279,7 +246,8 @@ em, .emphasis {
 .b { vertical-align: bottom; }
 
 .small {
-  font-size: 0.8em;
+  font-size: 90%;
+  margin: 1.5ex;
 }
 .clear {
   clear: both;
@@ -288,19 +256,15 @@ em, .emphasis {
   float: none;
   width: 100%;
 }
-.feedback {
-  margin: 0;
-  padding: 5px;
-  background-color: #ddc;
-  color: #555;
-}
-.notice {
+
+.notice, .feedback {
   margin: 3px 0;
   padding: 5px;
-  background-color: #EEE;
-  color: #333;
-  border: 1px solid #CCC;
+  background-color: #ccc;
+  color: #780028;
   line-height: 1.2;
+  text-align: center;
+  font-size: 110%;
 }
 .warning {
   margin: 3px 20px;
@@ -470,10 +434,20 @@ em, .emphasis {
 }
 #inner_wrapper {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 10px 0 10px 0;
   overflow: auto;
+	background-color: whitesmoke;
+	border: 2px groove ;
 	border-style: groove;
 }
+#header {
+  background: url(./logo.png) top center no-repeat;
+  height: 70px;
+  /* for CSS3, this should be background-height */
+  width: 100%;
+  display: inline-block;
+  text-align: left; }
+
 .full_width {
   width: 600px;
 }
@@ -483,11 +457,13 @@ em, .emphasis {
 }
 #footer {
   margin: 0;
+  font-style: italic;
   padding: 20px;
-  color:  #ddd;
+  color:  #888;
+  background-color: #eee;
 }
 #footer a {
-        color:  white;
+        color:  rgba(120,0,40,.3);
         font-weight: bold;
         text-decoration:  underline;
 }
@@ -497,47 +473,32 @@ em, .emphasis {
    doing - it allows the UL environment to create horizontal tabs
  */
 
-#store_nav, #staff_nav {
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+ */
+ul.nav {
+  background-color: #780028;
   float: left;
-  width: 800px;
+  width: 100%;
   list-style: none;
-}
-#staff_nav {
-  margin-top: 12px;
-  border-bottom: 2px solid #ccc;
-}
-#store_nav {
-	margin-top: 8px;
-   border-bottom: 3px double #999;
-}
-#store_nav li {
-  float: left;
-  border-right: 1px solid #666;
-}
-#staff_nav li {
-        float:  left;
-        border-right: 1px solid #666;
-        border-top: 2px solid #ccc;
-}
-#store_nav li { border-top: 2px solid #CCC; }
+  border-top: 1px solid #bbb;
+  border-bottom: none; }
+  ul.nav li {
+    float: left; }
+    ul.nav li a {
+      font-size: 11pt;
+      color: white;
+      background-color: #780028;
+      padding: 1ex 4ex 1ex 4ex;
+      margin: 0;
+      border-right: 1px solid whitesmoke;
+      display: block;
+      float: left;
+      text-decoration: none; }
+    ul.nav li a:hover {
+      background-color: #ccc;
+      color: #780028; }
 
-#store_nav li a, #staff_nav li a {
-  margin: 0;
-  padding: 10px 5px 3px 5px;
-  display: block;
-  float: left;
-  font-weight: bold;
-  ;
-  font-family: Candara, Lucida, Verdana, sans-serif;
-  text-decoration: none;
-  color:  #222;
-  background-color: #eee;
-	font-size: small;
-}
-
-#store_nav li a:hover, #staff_nav li a:hover {
-  background-color: #ccc;
-}
 
 /* override nav tab color when tab selected */
 body#store_index                    li#t_store_index a, 
@@ -554,8 +515,8 @@ body#showdates_edit					li#t_shows_list a,
 body#vouchertypes_list				li#t_vouchertypes_list a,
 body#vouchertypes_edit				li#t_vouchertypes_list a,
 body#donation_list 					li#t_donation_list a {
-        background-color: #407f09;
-        color: #fff;
+        background-color: #ccc;
+        color: #780028;
 }
 
 /*
@@ -605,11 +566,14 @@ body#donation_list 					li#t_donation_list a {
 }
 /* Welcome banner */
 #welcome_header {
-	float: left;
+  text-align: center;
+  padding: 2ex;
+color: #780028;
+margin-top: 2ex;
+background: rgba(120,0,40,.1);
+border-top: 1px solid #aaa;
 }
-#admin_welcome_header {
-	float: right;
-}
+
 
 /* 
  * Search panels
@@ -716,8 +680,8 @@ font-weight: bold;
  ************************/
 .page_heading {
   margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 5px double #777;
+  padding: 0.25ex 0 0.25ex 0;
+
 }
 /* "show my tickets" page */
 .showName {
@@ -747,20 +711,16 @@ h2.subscription_msg {
   padding: 10px;
 
   float: left;
-  width: 475px;
-
-  /*border: 1px solid red;*/
-  border-right: 5px double black;
+  width: 45%;
 }
 #new_customer {
   margin: 0;
   padding: 10px;
-
-  float: left;
-  width: 200px;
-
-  /*border: 1px solid green;*/
-}
+  text-align: center;
+  float: right;
+  width: 35%;
+  background-color: rgba(120,0,40,0.31);
+  color: white;}
 
 fieldset#FAQ {
   border: 1px solid red;
@@ -832,16 +792,18 @@ fieldset#admin_form {
  */
 
 .storeBanner {
-  background-color: maroon;
-  color: white;
+
+  color: #555;
   padding: 5px;
   margin: 4px;
   text-align: center;
-	font: italic large Georgia, "Times New Roman", Times, serif;
+	font: italic larger Georgia, "Times New Roman", Times, serif;
+	border-width: 4px;
+	border-style: ridge;
 }
 
 .storeBanner a {
-  color: yellow;
+
 }
 
 /***********************************************************************
@@ -873,7 +835,7 @@ div.auto_complete ul li {
 }
 
 div.auto_complete ul li.selected {
-	background-color: #ffb;
+	background-color: rgba(241,244,35,0.58);
 }
 
 div.auto_complete ul strong.highlight {
@@ -916,7 +878,7 @@ body#door_list h1, body#door_list h2 {
 #customer_quick_search {
 	padding-top: 0;
 	padding-bottom: 0;
-	background-color: rgba(250,16,15,0.5);
+	background-color: rgba(241,244,35,0.58);
 }
 #customer_quick_search table {
 	padding: 0;
@@ -933,7 +895,7 @@ body#door_list h1, body#door_list h2 {
  */
 #staffButtons {
 	border-top: 1px groove #fff;
-	background-color: #e4fe17;
+	background-color: rgba(241,244,35,0.58);
 }
 
 /*
