@@ -45,7 +45,9 @@ body {
   background-image: url(./gradient_squares.png);
   background-color: #838383;
 }
+
 body.testing { border: none; }
+
 /* text links */
 a {
         text-decoration: none;

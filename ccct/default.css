@@ -1,0 +1,849 @@
+/* pic */
+/* bg color behind pic */
+/* width of main div */
+/* for regular content text */
+/* venue logo */
+/* for CSS3, can eventually use background-height */
+/* as fraction of font height */
+/* tab appearance */
+/* fake buttons */
+a.genButton {
+  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
+  background-color: black;
+  padding: 2px 1em;
+  color: white;
+  text-decoration: none; }
+  a.genButton:hover {
+    background-color: #ccc;
+    color: white;
+    text-decoration: none; }
+
+a.adminButton {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  margin: 1px;
+  padding: 2px;
+  line-height: 1.5em; }
+  a.adminButton:hover {
+    background-color: #eff19e;
+    color: maroon;
+    border: 1px solid maroon;
+    text-decoration: none; }
+
+/* when a tab corresponds to selected page: */
+/*
+  Eric Meyer's CSS Reset Reloaded
+  http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+*/
+html, body, div, span, iframe, h1, h2, h3, pre, a, img, strong, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/*
+ * Page structure: 
+ * body
+ *  outer_wrapper
+ *    outer_header
+ *    inner_wrapper (main content of page)
+ *      header  (your organization's banner, etc)
+ *      nav     (nav tabs bar)
+ *      content (main page)
+ *  footer    (Audience1st footer)
+*/
+body {
+  background: url(./bkgd-swirls.gif) top center no-repeat;
+  background-color: #7b7775; }
+
+#outer_wrapper {
+  line-height: 1;
+  background: white;
+  width: 780px;
+  margin: 0 auto;
+  height: 100%; }
+
+#inner_wrapper {
+  background-color: white;
+  width: 780px;
+  /* change if want to do left sidebar */
+  margin: 0;
+  padding: 0 0 10px 0;
+  overflow: auto;
+  /* banner links to venue's main site */ }
+  #inner_wrapper a#top_level_banner_link {
+    margin: 0;
+    padding: 0; }
+
+.full_width {
+  width: 780px; }
+
+#header {
+  background: url(./ccctlogobanner.gif) top center no-repeat;
+  height: 139px;
+  /* for CSS3, this should be background-height */
+  width: 100%;
+  display: inline-block;
+  text-align: left; }
+
+#nav {
+  margin-top: -2px; }
+
+#content {
+  padding: 0 4px;
+  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
+  color: #222222; }
+
+#footer {
+  margin: 0;
+  padding: 20px;
+  color: white; }
+  #footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline; }
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+ */
+ul.nav {
+  background-color: black;
+  border-top: 1px solid white;
+  float: left;
+  width: 780px;
+  list-style: none;
+  border-bottom: none; }
+  ul.nav li {
+    float: left; }
+    ul.nav li a {
+      font: bold 8pt Verdana, Helvetica, Arial, sans-serif;
+      color: white;
+      background-color: black;
+      padding: 1ex 4ex 1ex 4ex;
+      margin: 0;
+      display: block;
+      float: left;
+      text-decoration: none; }
+    ul.nav li a:hover {
+      background-color: #ccc;
+      color: white; }
+
+/* override nav tab color when tab selected */
+body#store_index li#t_store_index a,
+body#customers_welcome li#t_customers_welcome a,
+body#customers_welcome_subscriber li#t_customers_welcome a,
+body#customers_edit li#t_customers_edit a,
+body#customers_change_password li#t_customers_change_password a,
+body#report_index li#t_report_index a,
+body#box_office_walkup li#t_box_office_walkup a,
+body#options_edit li#t_options_edit a,
+body#shows_list li#t_shows_list a,
+body#shows_edit li#t_shows_list a,
+body#showdates_edit li#t_shows_list a,
+body#vouchertypes_list li#t_vouchertypes_list a,
+body#vouchertypes_edit li#t_vouchertypes_list a,
+body#donation_list li#t_donation_list a {
+  background-color: #777; }
+
+/*
+ * Welcome banner elements
+ */
+.welcomeBanner {
+  font-size: 125%;
+  font-weight: bold; }
+
+#logged_in {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1em;
+  background-color: #EEE;
+  color: #444; }
+
+#homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
+  display: inline-block;
+  margin: 10px 0 8px 0; }
+
+/* Welcome banner */
+#welcome_header {
+  margin: 1ex auto;
+  padding-top: 10px;
+  border-top: 4px solid #7b7775;
+  display: block;
+  text-align: center; }
+
+/* text links */
+a {
+  text-decoration: none;
+  color: #c03202; }
+  a:hover {
+    text-decoration: underline; }
+
+/* basic paragraphs and headers */
+p {
+  margin: 6px 0; }
+
+pre {
+  padding: 10px;
+  font-family: Monaco,Courier,fixed; }
+
+h1 {
+  font: 125%/125% 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
+  color: #c03202;
+  margin: 10px 0;
+  padding: 0;
+  letter-spacing: 1pt; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 6px 0;
+  padding: 0;
+  letter-spacing: 1pt; }
+
+/* imitate font characteristics of h1 and h2 */
+.h2 {
+  margin: 6px 0;
+  padding: 0; }
+
+strong, .strong {
+  font-weight: bold;
+  color: #c03202; }
+
+em, .emphasis {
+  color: #333333;
+  font-style: italic; }
+
+form {
+  display: inline; }
+
+fieldset {
+  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
+  color: #222222;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black; }
+
+label {
+  margin: 0;
+  padding-right: 5px;
+  float: left;
+  clear: left;
+  width: 150px;
+  text-align: right;
+  font-size: 0.9em; }
+
+thead {
+  background-color: #EEE;
+  color: black; }
+
+th {
+  margin: 0;
+  padding: 3px;
+  font-weight: bold;
+  text-align: center;
+  background: #333;
+  color: #fff; }
+
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+.hidden {
+  display: none; }
+
+.invisible {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  font-size: 1px;
+  color: white;
+  border: none; }
+
+.currency {
+  text-align: right; }
+
+.indented {
+  margin: 5px 0 5px 150px;
+  padding: 0; }
+
+.r {
+  text-align: right; }
+
+.c, .center {
+  text-align: center; }
+
+.l {
+  text-align: left; }
+
+.t, .top {
+  vertical-align: top; }
+
+.b {
+  vertical-align: bottom; }
+
+.small {
+  font-size: 0.8em; }
+
+.clear {
+  clear: both; }
+
+.no_float {
+  float: none;
+  width: 100%; }
+
+.feedback {
+  margin: 0;
+  padding: 5px;
+  background-color: #ddc;
+  color: #555; }
+
+.notice {
+  margin: 3px 0;
+  padding: 5px;
+  background-color: #EEE;
+  color: maroon;
+  border: 1px solid #CCC;
+  line-height: 1.5;
+  text-align: center;
+  font-size: larger; }
+
+.warning {
+  margin: 3px 20px;
+  color: #c03202;
+  border: 1px solid red;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 6px 10px; }
+
+.checkout_error {
+  margin: 3px 20px;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 6px 10px;
+  line-height: 1.2;
+  border: 1px double #c03202; }
+
+.spinner16 {
+  /* display: none; */ }
+
+.wide_button {
+  letter-spacing: 0.25em;
+  width: 150px; }
+
+.wide_label {
+  width: 300px; }
+
+/* show 'spinner' in a DIV that is the right size for the image, so
+   layout isn't affected when it is shown/hidden */
+.spinner16 {
+  height: 18px;
+  width: 18px;
+  padding: 1px;
+  margin: 0;
+  display: none; }
+
+/* Error messages shown to customers */
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #c03202;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 110%;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff; }
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px; }
+
+#errorExplanation ul li {
+  font-size: 110%;
+  list-style: square; }
+
+.explain {
+  border: 1px solid #8d3127;
+  background: white;
+  padding: 2px 2px;
+  margin: 2px 2px;
+  vertical-align: top; }
+
+/*
+ * Generic classes for admin-only visible elements
+ */
+.infoMsg {
+  color: #333333;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  font-size: 125%;
+  border: 2px solid #333333; }
+
+.admin {
+  background-color: #eff19e;
+  color: black; }
+
+.adminDiv {
+  background-color: #eff19e;
+  display: block; }
+
+.adminField {
+  clear: both;
+  padding: 2px 10px;
+  background-color: #eff19e;
+  color: black; }
+
+/* Additional field qualifiers for errors etc */
+.validatedAddress {
+  background-color: #1f1; }
+
+.validationError {
+  color: #c03202; }
+
+.highlighted {
+  background-color: #9f9; }
+
+.fieldWithErrors {
+  padding: 2px;
+  color: white;
+  background-color: #c03202;
+  display: table; }
+
+.disabledField {
+  background-color: #e6e6e6;
+  border: none;
+  color: #000;
+  font-weight: bold; }
+
+/* 
+ * Search panels
+ */
+form#quick_search {
+  float: left; }
+
+form#search_on_any_field {
+  margin-left: 10px; }
+
+/*
+ * My Tickets and Reservations page
+ */
+#customerVoucherList tbody td, #customerVoucherList td {
+  border-bottom: 3px solid #CCC;
+  text-align: center; }
+
+table#subscriptionReservations tr {
+  line-height: 1.75; }
+
+table#subscriptionReservations td.selectShowdate {
+  /*  width: 25em;*/ }
+
+table#subscriptionReservations .showdate {
+  width: 20em; }
+
+table#subscriptionReservations .action {
+  text-align: center;
+  vertical-align: top; }
+
+/********************
+  Cart styles 
+ ********************/
+div#cart {
+  margin: 5px 0;
+  padding: 10px;
+  border: 3px double #CCC; }
+
+li.cart_item {
+  margin: 0;
+  padding: 3px; }
+
+.price_and_actions {
+  margin: 0;
+  padding-left: 5px;
+  width: 20%;
+  float: right; }
+
+.price_and_actions .actions {
+  float: right; }
+
+span.cart_item_desc {
+  display: block; }
+
+.voucher_show_name {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  font-size: 150%;
+  color: #800000; }
+
+.voucher_show_date {
+  font-style: italic; }
+
+.voucher_type {
+  margin: 0;
+  padding: 0 3px;
+  background-color: transparent;
+  color: #444; }
+
+.donation_name {
+  background-color: transparent;
+  color: maroon;
+  font-weight: bold; }
+
+#cart_total {
+  margin-top: 2px;
+  padding: 2px;
+  background-color: #666;
+  color: white;
+  border: 1px solid #EEE; }
+
+#total_price {
+  display: block;
+  float: right;
+  font-weight: bold;
+  width: 20%; }
+
+/************************
+ * Page-specific styles 
+ ************************/
+.page_heading {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 5px double #777; }
+
+/* "show my tickets" page */
+.showName {
+  font-weight: bold;
+  color: maroon;
+  line-height: 1.4; }
+
+h2.subscription_msg {
+  margin: 0;
+  padding: 10px;
+  background-color: #EEE;
+  color: #057;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 150%;
+  text-align: center;
+  letter-spacing: normal; }
+
+.subscription_msg2 {
+  margin-top: 3px;
+  padding: 0;
+  font-size: 0.9em;
+  text-align: center; }
+
+#have_account {
+  margin: 0;
+  padding: 10px;
+  float: left;
+  width: 475px;
+  /*border: 1px solid red;*/
+  border-right: 5px double black; }
+
+#new_customer {
+  margin: 0;
+  padding: 10px;
+  float: left;
+  width: 200px;
+  /*border: 1px solid green;*/ }
+
+fieldset#FAQ {
+  border: 1px solid red; }
+
+fieldset#admin_form {
+  color: black;
+  border: 1px solid black; }
+
+/*
+ *  Store   //////////////////////////////////////////////////
+ */
+#ticket_menus {
+  margin-top: 20px;
+  padding: 0; }
+
+#ticket_menus label {
+  width: 300px;
+  padding-top: 0.7ex; }
+
+#enter_promo_code label {
+  width: 300px; }
+
+#ticket_menus #add_to_cart {
+  margin-left: 300px;
+  padding: 0; }
+
+#ticket_menus *.explanation {
+  margin-left: 300px;
+  padding: 1px;
+  padding-bottom: 2px;
+  /* border: 1px solid #ccc;*/
+  border: 1px solid #891912;
+  border: 1px solid rgba(137, 25, 18, 0.5);
+  color: rgba(137, 25, 18, 0.85); }
+
+#orderTotal {
+  font-size: larger;
+  font-weight: bold;
+  vertical-align: bottom;
+  color: #c03202;
+  background-color: #eee; }
+
+#orderTotal input {
+  font-size: inherit; }
+
+.storeText {
+  text-align: center; }
+
+#donate {
+  margin: 0 0 20px 0;
+  padding: 10px 0;
+  background-color: #f6f6ed; }
+
+#donate_info {
+  margin: 0 auto 10px auto;
+  padding: 5px;
+  width: 400px;
+  background-color: #EEE;
+  color: black;
+  border: 1px solid black; }
+
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+.storeBanner {
+  background-color: maroon;
+  color: white;
+  padding: 5px;
+  margin: 4px;
+  text-align: center;
+  font: italic large Georgia, "Times New Roman", Times, serif; }
+
+.storeBanner a {
+  color: yellow; }
+
+/* Popup help links
+ */
+.popupHelpLink {
+  background-color: #fcfe17;
+  font-size: smaller;
+  color: #1c05fd;
+  padding: 2px; }
+
+/***********************************************************************
+ * Styles below this point are never seen by regular customers
+ **********************************************************************/
+/* 
+ * Customer name autocompletion popup
+ * Don't modify these unless you know
+ * what you're doing
+ */
+div.auto_complete {
+  width: 350px;
+  background: #fff; }
+
+div.auto_complete ul {
+  border: 1px solid #888;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none; }
+
+div.auto_complete ul li {
+  margin: 0;
+  padding: 3px; }
+
+div.auto_complete ul li.selected {
+  background-color: #ffb; }
+
+div.auto_complete ul strong.highlight {
+  color: #800;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Door list
+ */
+body#door_list {
+  background: none;
+  font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+  font-size: 11pt; }
+
+body#door_list h1, body#door_list h2 {
+  font-family: inherit;
+  color: black; }
+
+/* Index letter column (style applies to TD) */
+.maincolumn {
+  border: none;
+  background: none;
+  font-size: large;
+  font-weight: bold;
+  color: red; }
+
+/* Subscribers are hilited on door list (style applies to a TR) */
+.subscriber {
+  background-color: #9f9; }
+
+/*
+ * Quick search customer panel
+ */
+#customer_quick_search {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+#customer_quick_search table {
+  padding: 0;
+  margin: 0; }
+
+#onBehalfOfName {
+  color: blue;
+  font-weight: bold;
+  font-size: larger; }
+
+/*
+ * Merge toolbar
+ */
+.merge_bar {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666; }
+
+/*
+ * Staff action buttons that appear for a customer (Contact, Prospecting, etc)
+ */
+#staffButtons {
+  border-top: 1px groove #fff; }
+
+/*
+ * General utility styles
+ */
+.totalsRow {
+  font-weight: bold;
+  background-color: #ccc;
+  font-size: larger; }
+
+/* 
+ * Edit shows and showdates
+ */
+.show_name {
+  font-style: italic; }
+
+table.showdates_summary {
+  border-style: solid;
+  border-color: #000;
+  background-color: #e6e6e6;
+  line-height: normal;
+  padding-left: 20px; }
+
+table.showdates_summary th {
+  background-color: #e6e6e6;
+  color: #4c4c4c;
+  text-align: center; }
+
+table.showdates_summary td {
+  padding-right: 5px;
+  padding-left: 5px; }
+
+/*
+ * Box office functions header ("stats for this show")
+ */
+table#showdate_info, table#showdate_info td {
+  border: 0;
+  font-size: larger;
+  width: 600px;
+  text-align: center; }
+
+/*
+ * Settings
+ */
+table#options_table td.option_name {
+  width: 20em;
+  vertical-align: top;
+  text-align: left; }
+
+table#options_table td.option_value {
+  text-align: left; }
+
+/*
+ * Reports
+ */
+/* Advance sales reports */
+div.show .showSalesDate {
+  width: 15em; }
+
+div.show .showSalesVoucherType {
+  padding-left: 1em;
+  width: 20em; }
+
+div.show .showSalesDateQty {
+  width: 5em;
+  text-align: left; }
+
+div.show .showSalesDatePercent, div.show .showSalesPercent {
+  width: 12em; }
+
+div.show .showSalesDateRevenue {
+  width: 10em;
+  font-weight: bold; }
+
+div.show .showSalesRevenue {
+  width: 10em; }
+
+#pageDiv .showDateSummary {
+  margin: 2px;
+  background: white; }
+
+#pageDiv .showDate {
+  float: left;
+  font-size: larger;
+  background-color: #666;
+  color: white;
+  display: block; }
+
+#pageDiv .showDateNav {
+  text-align: right;
+  background-color: white;
+  color: black;
+  font-weight: bold; }
+
+#pageDiv table.summarySales {
+  width: 80%;
+  min-width: 400px;
+  max-width: 680px; }
+
+#pageDiv td.salesCategory {
+  width: 85%; }
+
+#pageDiv td.salesQty {
+  width: 15%; }
+
+/* output options for customer lists */
+#output_options p {
+  margin-left: 2ex;
+  margin: 4px; }
+
+#output_options p.fieldgroup {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: bold;
+  margin-left: 0; }
