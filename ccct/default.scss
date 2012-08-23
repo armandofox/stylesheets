@@ -1,9 +1,9 @@
-$background:        url(./bkgd-swirls.gif) top center no-repeat;  /* pic */
-$backgroundColor:   #7b7775;          /* bg color behind pic */
-$width:             780px;            /* width of main div */
-$defaultBackground: white;            /* for regular content text */
-$banner: url(./ccctlogobanner.gif) top center no-repeat;      /* venue logo */
-$bannerHeight:      139px;  /* for CSS3, can eventually use background-height */
+$background:        url(./bkgd-swirls.gif) top center no-repeat;  // pic
+$backgroundColor:   #7b7775;          // bg color behind pic 
+$width:             780px;            // width of main div 
+$defaultBackground: white;            // for regular content text 
+$banner: url(./ccctlogobanner.gif) top center no-repeat;      // venue logo 
+$bannerHeight:      139px;  // for CSS3, can eventually use background-height 
 
 $contentFont: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
 $contentFontColor: #222;
@@ -12,9 +12,9 @@ $headingFontColor: #c03202;
 $emphColor1: #c03202;
 $emphColor2: #333;
 
-$tabHeight:      75%; /* as fraction of font height */
+$tabHeight:      75%; // as fraction of font height 
 
-/* tab appearance */
+// tab appearance 
 @mixin tab {
   font: bold 8pt Verdana, Helvetica, Arial, sans-serif;
   color: white;
@@ -57,7 +57,7 @@ a.adminButton {
   }
 }
 
-/* when a tab corresponds to selected page: */
+// when a tab corresponds to selected page:
 
 $labelIndent: 150px;
 $errorWidth:  400px;
@@ -642,6 +642,12 @@ fieldset#admin_form {
 /*
  *  Store   //////////////////////////////////////////////////
  */
+
+/* customer request: hide Promo Code box on Subscriptions sales page */
+body#store_subscribe div#enter_promo_code {
+  display: none;
+}
+
 #ticket_menus {
   margin-top: 20px;
   padding: 0;
