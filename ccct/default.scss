@@ -766,6 +766,21 @@ div.auto_complete ul strong.highlight {
 	padding: 0;
 }
 
+/* Printable receipts */
+/* plain style for receipts */
+body#receipt { 
+  background: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  border: 2px solid black;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: larger;
+  * {
+  color: black;
+  background: none;
+  }
+}
 
 
 /*

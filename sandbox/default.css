@@ -37,6 +37,20 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 :focus {
         outline: 0;
 }
+/* plain style for receipts */
+body#receipt { 
+  background: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  border: 2px solid black;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: larger;
+}
+body#receipt * {
+  color: black;
+  background: none;
+}
 body {
   color: #222;
   font-family: Candara, Helvetica, Arial, sans-serif ;

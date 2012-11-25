@@ -663,6 +663,20 @@ div.auto_complete ul strong.highlight {
   margin: 0;
   padding: 0; }
 
+/* Printable receipts */
+/* plain style for receipts */
+body#receipt {
+  background: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  border: 2px solid black;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: larger; }
+  body#receipt * {
+    color: black;
+    background: none; }
+
 /*
  * Door list
  */
