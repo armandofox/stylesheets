@@ -210,7 +210,6 @@ body#donation_list 					li#t_donation_list a {
 	margin: 10px 0 8px 0;
 }
 
-
 /* text links */
 a {
         text-decoration: none;
@@ -646,6 +645,11 @@ fieldset#admin_form {
 /* customer request: hide Promo Code box on Subscriptions sales page */
 body#store_subscribe div#enter_promo_code {
   display: none;
+}
+
+#event_types {
+  margin-top: 1ex;
+  margin-bottom: 1ex;
 }
 
 #ticket_menus {

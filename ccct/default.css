@@ -560,6 +560,11 @@ fieldset#admin_form {
 body#store_subscribe div#enter_promo_code {
   display: none; }
 
+#event_types {
+  margin-top: 1ex;
+  margin-bottom: 1ex;
+}
+
 #ticket_menus {
   margin-top: 20px;
   padding: 0; }
