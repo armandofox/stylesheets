@@ -590,10 +590,10 @@ body#donation_list 					li#t_donation_list a {
 }
 /* Welcome banner */
 #welcome_header {
-	float: left;
+	clear:  both;
 }
 #admin_welcome_header {
-	float: right;
+        clear: both;
 }
 
 /* 
@@ -676,7 +676,7 @@ span.cart_item_desc {
   color: #444;
 }
 .promo_code { }
-.donation_name {
+.donation_name, .retail_item_description {
   background-color: transparent;
 color:  maroon;
 font-weight: bold;
