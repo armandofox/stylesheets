@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Antic+Slab|PT+Sans');
+
+/* @override http://localhost:3000/stylesheets/venue/default.css?1492396271 */
+
 /* fake buttons */
 a.genButton {
-  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
+  font: "PT Sans", sans-serif;
   background-color: black;
-  padding: 2px 1em;
+  padding: 2px 8px;
   color: white;
   text-decoration: none; }
   a.genButton:hover {
@@ -55,19 +59,19 @@ tr, th, td {
  *  #footer    (Audience1st footer)
 */
 body {
-  background: url(./bkgd-swirls.gif) top center no-repeat;
-  background-color: #7b7775; }
+  background-color: #e9ddfd;
+  font-family: Antic Slab, serif; 
+  }
 
 #outer_wrapper {
   line-height: 1;
   background: white;
-  width: 780px;
-  margin: 0 auto;
+  width: auto;
+  margin: 0 100px 0 100px;
   height: 100%; }
 
 #inner_wrapper {
   background-color: white;
-  width: 780px;
   /* change if want to do left sidebar */
   margin: 0;
   padding: 0 0 10px 0;
@@ -78,10 +82,11 @@ body {
     padding: 0; }
 
 .full_width {
-  width: 780px; }
+}
 
 #header {
-  background: url(./Rhino_Logo_Star_Comet_114.png) top center no-repeat;
+  background: url(./Rhino_Logo_Star_Comet_114.png) top left no-repeat;
+  margin-left: 2em;
   height: 139px;
   /* for CSS3, this should be background-height */
   width: 100%;
@@ -93,13 +98,13 @@ body {
 
 #content {
   padding: 0 4px;
-  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
-  color: #222222; }
+  color: #981c17;
+}
 
 #footer {
   margin: 0;
   padding: 20px;
-  color: white; }
+  color: gray; }
   #footer a {
     color: white;
     font-weight: bold;
@@ -109,22 +114,22 @@ body {
    doing - it allows the UL environment to create horizontal tabs
  */
 ul.nav {
-  background-color: black;
+  background-color: #ec94a1;
   border-top: 1px solid white;
   float: left;
-  width: 780px;
+  width: 100%;
   list-style: none;
   border-bottom: none; }
   ul.nav li {
-    float: left; }
+      margin: 2px;
+      padding: 0 2px 0 2px;
+      float: left; }
     ul.nav li a {
-      font: bold 8pt Verdana, Helvetica, Arial, sans-serif;
+      font-family: PT Sans, sans-serif;
       color: white;
-      background-color: black;
-      padding: 1ex 4ex 1ex 4ex;
-      margin: 0;
+      background-color: #ec94a1;
+      padding: 1ex 2ex 1ex 2ex;
       display: block;
-      float: left;
       text-decoration: none; }
     ul.nav li a:hover {
       background-color: #ccc;
@@ -178,7 +183,7 @@ pre {
   font-family: Monaco,Courier,fixed; }
 
 h1 {
-  font: 125%/125% 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
+  font-family: inherit;  
   color: #c03202;
   margin: 10px 0;
   padding: 0;
@@ -231,7 +236,7 @@ th {
   padding: 3px;
   font-weight: bold;
   text-align: center;
-  background: #333;
+  background: #ffa8b1;
   color: #fff; }
 
 /* 
@@ -291,7 +296,7 @@ th {
   margin: 3px 0;
   padding: 5px;
   background-color: #EEE;
-  color: maroon;
+  color: white;
   border: 1px solid #CCC;
   line-height: 1.5;
   text-align: center;
@@ -299,10 +304,9 @@ th {
 
 .warning {
   margin: 3px 20px;
-  color: #c03202;
+  color: white;
   border: 1px solid red;
   line-height: 1.2;
-  font-weight: bold;
   padding: 6px 10px; }
 
 .checkout_error {
@@ -386,6 +390,7 @@ th {
   display: block; }
 
 .adminField {
+  font-family: PT Sans, sans-serif;
   clear: both;
   padding: 2px 10px;
   background-color: #eff19e;
@@ -625,7 +630,7 @@ body#store_subscribe div#enter_promo_code {
   padding: 5px;
   margin: 4px;
   text-align: center;
-  font: italic large Georgia, "Times New Roman", Times, serif; }
+}
 
 .storeBanner a {
   color: yellow; }
