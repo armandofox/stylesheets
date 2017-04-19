@@ -180,6 +180,13 @@ dd {
   padding-left: 20px;
 }
 
+label.plain {
+  width: auto;
+  clear: none;
+  float: none;
+  text-align: left;
+}
+
 label {
   margin: 0;
   padding-right: 5px;
