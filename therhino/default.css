@@ -296,27 +296,23 @@ th {
   margin: 3px 0;
   padding: 5px;
   background-color: #EEE;
-  color: white;
-  border: 1px solid #CCC;
+  color: black;
   line-height: 1.5;
   text-align: center;
   font-size: larger; }
 
 .warning {
   margin: 3px 20px;
-  color: white;
-  border: 1px solid red;
   line-height: 1.2;
   padding: 6px 10px; }
 
 .checkout_error {
   margin: 3px 20px;
   background-color: yellow;
-  color: black;
   font-weight: bold;
   padding: 6px 10px;
   line-height: 1.2;
-  border: 1px double #c03202; }
+ }
 
 .spinner16 {
   /* display: none; */ }
