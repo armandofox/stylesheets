@@ -324,6 +324,10 @@ th {
 .wide_label {
   width: 300px; }
 
+.orderRow {
+  padding: 1ex 0 1ex 0;
+}
+
 /* show 'spinner' in a DIV that is the right size for the image, so
    layout isn't affected when it is shown/hidden */
 .spinner16 {
