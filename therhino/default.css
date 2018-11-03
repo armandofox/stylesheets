@@ -1,51 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Antic+Slab|PT+Sans');
 
-/* @override http://localhost:3000/stylesheets/venue/default.css?1492396271 */
-
-/* fake buttons */
-a.genButton {
-  font: "PT Sans", sans-serif;
-  background-color: black;
-  padding: 2px 8px;
-  color: white;
-  text-decoration: none; }
-  a.genButton:hover {
-    background-color: #ccc;
-    color: white;
-    text-decoration: none; }
-
-a.adminButton {
-  color: black;
-  background-color: white;
-  border: 1px solid black;
-  margin: 1px;
-  padding: 2px;
-  line-height: 1.5em; }
-  a.adminButton:hover {
-    background-color: #eff19e;
-    color: maroon;
-    border: 1px solid maroon;
-    text-decoration: none; }
-
-/*
-  Eric Meyer's CSS Reset Reloaded
-  http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
-*/
-html, body, div, span, iframe, h1, h2, h3, pre, a, img, strong, ol, ul,
-li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
-tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font: inherit;
-  color: inherit;
-  vertical-align: baseline; }
-
-/* remember to define focus styles! */
-:focus {
-  outline: 0; }
-
+html {
+    font-family: Antic Slab, serif;
+}
 /*
  * Page structure: 
  * body
@@ -60,7 +17,6 @@ tr, th, td {
 */
 body {
   background-color: #e9ddfd;
-  font-family: Antic Slab, serif; 
   }
 
 #outer_wrapper {
@@ -137,10 +93,11 @@ ul.nav {
 
 /* override nav tab color when tab selected */
 body#store_index li#t_store_index a,
-body#customers_welcome li#t_customers_welcome a,
-body#customers_welcome_subscriber li#t_customers_welcome a,
+body#customers_show li#t_customers_show a,
+body#customers_show_subscriber li#t_customers_show a,
 body#customers_edit li#t_customers_edit a,
-body#customers_change_password li#t_customers_change_password a,
+body#customers_change_password_for li#t_customers_change_password_for a,
+body#store_donate li#t_store_donate a,
 body#report_index li#t_report_index a,
 body#box_office_walkup li#t_box_office_walkup a,
 body#options_edit li#t_options_edit a,
@@ -175,8 +132,6 @@ a {
     text-decoration: underline; }
 
 /* basic paragraphs and headers */
-p {
-  margin: 6px 0; }
 
 pre {
   padding: 10px;
@@ -195,11 +150,6 @@ h2 {
   padding: 0;
   letter-spacing: 1pt; }
 
-/* imitate font characteristics of h1 and h2 */
-.h2 {
-  margin: 6px 0;
-  padding: 0; }
-
 strong, .strong {
   font-weight: bold;
   color: #c03202; }
@@ -214,7 +164,6 @@ form {
 fieldset {
   font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
   color: #222222;
-  margin: 10px;
   padding: 10px;
   border: 1px solid black; }
 
@@ -261,20 +210,8 @@ th {
   margin: 5px 0 5px 150px;
   padding: 0; }
 
-.r {
-  text-align: right; }
-
-.c, .center {
-  text-align: center; }
-
-.l {
-  text-align: left; }
-
 .t, .top {
   vertical-align: top; }
-
-.b {
-  vertical-align: bottom; }
 
 .small {
   font-size: 0.8em; }
@@ -301,41 +238,12 @@ th {
   text-align: center;
   font-size: larger; }
 
-.warning {
-  margin: 3px 20px;
-  line-height: 1.2;
-  padding: 6px 10px; }
-
-.checkout_error {
-  margin: 3px 20px;
-  background-color: yellow;
-  font-weight: bold;
-  padding: 6px 10px;
-  line-height: 1.2;
- }
-
-.spinner16 {
-  /* display: none; */ }
-
-.wide_button {
-  letter-spacing: 0.25em;
-  width: 150px; }
-
 .wide_label {
   width: 300px; }
 
 .orderRow {
   padding: 1ex 0 1ex 0;
 }
-
-/* show 'spinner' in a DIV that is the right size for the image, so
-   layout isn't affected when it is shown/hidden */
-.spinner16 {
-  height: 18px;
-  width: 18px;
-  padding: 1px;
-  margin: 0;
-  display: none; }
 
 /* Error messages shown to customers */
 #errorExplanation {
@@ -397,9 +305,6 @@ th {
   color: black; }
 
 /* Additional field qualifiers for errors etc */
-.validatedAddress {
-  background-color: #1f1; }
-
 .validationError {
   color: #c03202; }
 
@@ -417,15 +322,6 @@ th {
   border: none;
   color: #000;
   font-weight: bold; }
-
-/* 
- * Search panels
- */
-form#quick_search {
-  float: left; }
-
-form#search_on_any_field {
-  margin-left: 10px; }
 
 /*
  * My Tickets and Reservations page
@@ -509,11 +405,6 @@ span.cart_item_desc {
 /************************
  * Page-specific styles 
  ************************/
-.page_heading {
-  margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 5px double #777; }
-
 /* "show my tickets" page */
 .showName {
   font-weight: bold;
@@ -536,28 +427,6 @@ h2.subscription_msg {
   padding: 0;
   font-size: 0.9em;
   text-align: center; }
-
-#have_account {
-  margin: 0;
-  padding: 10px;
-  float: left;
-  width: 475px;
-  /*border: 1px solid red;*/
-  border-right: 5px double black; }
-
-#new_customer {
-  margin: 0;
-  padding: 10px;
-  float: left;
-  width: 200px;
-  /*border: 1px solid green;*/ }
-
-fieldset#FAQ {
-  border: 1px solid red; }
-
-fieldset#admin_form {
-  color: black;
-  border: 1px solid black; }
 
 /*
  *  Store   //////////////////////////////////////////////////
@@ -635,14 +504,6 @@ body#store_subscribe div#enter_promo_code {
 .storeBanner a {
   color: yellow; }
 
-/* Popup help links
- */
-.popupHelpLink {
-  background-color: #fcfe17;
-  font-size: smaller;
-  color: #1c05fd;
-  padding: 2px; }
-
 /***********************************************************************
  * Styles below this point are never seen by regular customers
  **********************************************************************/
@@ -687,29 +548,6 @@ body#receipt {
   body#receipt * {
     color: black;
     background: none; }
-
-/*
- * Door list
- */
-body#door_list {
-  background: none;
-  font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
-  font-size: 11pt; }
-  body#door_list h1, body#door_list h2 {
-    font-family: inherit;
-    color: black; }
-
-/* Index letter column (style applies to TD) */
-.maincolumn {
-  border: none;
-  background: none;
-  font-size: large;
-  font-weight: bold;
-  color: red; }
-
-/* Subscribers are hilited on door list (style applies to a TR) */
-.subscriber {
-  background-color: #9f9; }
 
 /*
  * Quick search customer panel
@@ -777,16 +615,6 @@ table#showdate_info, table#showdate_info td {
   text-align: center; }
 
 /*
- * Settings
- */
-table#options_table td.option_name {
-  width: 20em;
-  vertical-align: top;
-  text-align: left; }
-table#options_table td.option_value {
-  text-align: left; }
-
-/*
  * Reports
  */
 /* Advance sales reports */
@@ -805,38 +633,3 @@ div.show .showSalesDateRevenue {
   font-weight: bold; }
 div.show .showSalesRevenue {
   width: 10em; }
-
-#pageDiv .showDateSummary {
-  margin: 2px;
-  background: white; }
-#pageDiv .showDate {
-  float: left;
-  font-size: larger;
-  background-color: #666;
-  color: white;
-  display: block; }
-#pageDiv .showDateNav {
-  text-align: right;
-  background-color: white;
-  color: black;
-  font-weight: bold; }
-#pageDiv table.summarySales {
-  width: 80%;
-  min-width: 400px;
-  max-width: 680px; }
-#pageDiv td.salesCategory {
-  width: 85%; }
-#pageDiv td.salesQty {
-  width: 15%; }
-
-/* output options for customer lists */
-#output_options p {
-  margin-left: 2ex;
-  margin: 4px; }
-#output_options p.fieldgroup {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  font-weight: bold;
-  margin-left: 0; }
