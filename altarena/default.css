@@ -84,9 +84,6 @@ em, .emphasis {
 /* 
  * Utility styles - these are used in various places so don't delete
  */
-.hidden {
-  display: none;
- }
 .invisible {
   position: absolute;
   left: 0;

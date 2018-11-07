@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Antic+Slab|PT+Sans');
 
-html {
-    font-family: Antic Slab, serif;
-}
 /*
  * Page structure: 
  * body
@@ -15,9 +12,13 @@ html {
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
 */
+html {
+    font-size: 11pt;
+}
 body {
   background-color: #e9ddfd;
-  }
+  font-family: "Antic Slab", serif;
+}
 
 #outer_wrapper {
   line-height: 1;
@@ -37,7 +38,8 @@ body {
     margin: 0;
     padding: 0; }
 
-.full_width {
+  .full_width {
+      width: 100%;
 }
 
 #header {
@@ -137,13 +139,6 @@ pre {
   padding: 10px;
   font-family: Monaco,Courier,fixed; }
 
-h1 {
-  font-family: inherit;  
-  color: #c03202;
-  margin: 10px 0;
-  padding: 0;
-  letter-spacing: 1pt; }
-
 h2 {
   font-size: 1.5em;
   margin: 6px 0;
@@ -162,19 +157,13 @@ form {
   display: inline; }
 
 fieldset {
-  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
   color: #222222;
-  padding: 10px;
-  border: 1px solid black; }
-
-label {
-  margin: 0;
-  padding-right: 5px;
-  float: left;
-  clear: left;
-  width: 150px;
-  text-align: right;
-  font-size: 0.9em; }
+  border: 1px solid black;
+}
+legend {
+    padding: 4px;
+    margin: 4px;
+}
 
 thead {
   background-color: #EEE;
@@ -191,9 +180,6 @@ th {
 /* 
  * Utility styles - these are used in various places so don't delete
  */
-.hidden {
-  display: none; }
-
 .invisible {
   position: absolute;
   left: 0;
