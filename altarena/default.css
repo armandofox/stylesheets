@@ -38,11 +38,6 @@ table.hilite tr:hover {
 .odd { background-color: #eee; }
 
 
-form {
-	display: inline;
-}
-
-
 fieldset {
   padding: 10px;
   border: 1px solid black;
