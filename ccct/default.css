@@ -36,9 +36,6 @@ body {
     margin: 0;
     padding: 0; }
 
-.full_width {
-  width: 780px; }
-
 #header {
   background: url(./ccctlogobanner.gif) top center no-repeat;
   height: 139px;
@@ -244,13 +241,6 @@ th {
   padding: 6px 10px;
   line-height: 1.2;
   border: 1px double #c03202; }
-
-.wide_button {
-  letter-spacing: 0.25em;
-  width: 150px; }
-
-.wide_label {
-  width: 300px; }
 
 /* Error messages shown to customers */
 #errorExplanation {

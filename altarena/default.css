@@ -33,10 +33,6 @@ table {
 table.hilite tr:hover {
 	background-color: #fcfe69;
 }
-/* To make alternating table rows different colors, set the styles here  */
-.even { background-color: inherit; }
-.odd { background-color: #eee; }
-
 
 fieldset {
   padding: 10px;
@@ -59,12 +55,6 @@ td {
   padding: 1px 2px;
 }
 /*
-caption {
-        text-align: left;
-        font-weight: normal;
-}
-*/
-/*
  *  Classes to apply to generic elements
  */
 
@@ -79,15 +69,7 @@ em, .emphasis {
 /* 
  * Utility styles - these are used in various places so don't delete
  */
-.invisible {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  font-size: 1px;
-  color: white;
-  border: none;
-}
+
 .currency {
   text-align: right;
 }
@@ -133,13 +115,6 @@ em, .emphasis {
   padding: 6px 10px;
 }
 
-.wide_button {
-  letter-spacing: 0.25em;
-  width: 150px;
-}
-.wide_label {
-  width: 300px;
-}
 
 /* Error messages shown to customers */
 
@@ -255,9 +230,6 @@ em, .emphasis {
   padding: 0 0 10px 0;
   overflow: auto;
 
-}
-.full_width {
-  width: 800px;
 }
 #header {
   height: 200px;
@@ -377,29 +349,6 @@ body#donation_list 					li#t_donation_list a {
 #admin_welcome_header {
         clear: both;
 }
-
-/*
- * My Tickets and Reservations page
- */
-#customerVoucherList tbody td, #customerVoucherList td {
-  border-bottom: 3px solid #CCC;
-  text-align: center;
-}
-
-table#subscriptionReservations tr {
-        line-height: 1.75;
-}
-table#subscriptionReservations td.selectShowdate {
-/*  width: 25em;*/
-}
-table#subscriptionReservations .showdate {
-  width: 20em;
-}
-table#subscriptionReservations .action {
-  text-align: center;
-  vertical-align: top;
-}
-
 
 /********************
   Cart styles 
