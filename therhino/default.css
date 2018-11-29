@@ -12,20 +12,25 @@
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
 */
+@media (min-device-width: 800px) {
 html {
     font-size: 11pt;
 }
+}
+    
 body {
   background-color: #e9ddfd;
   font-family: "Antic Slab", serif;
 }
 
+@media (min-device-width: 800px) {
 #outer_wrapper {
   line-height: 1;
   background: white;
   width: auto;
   margin: 0 100px 0 100px;
   height: 100%; }
+}
 
 #inner_wrapper {
   background-color: white;
@@ -37,10 +42,6 @@ body {
   #inner_wrapper a#top_level_banner_link {
     margin: 0;
     padding: 0; }
-
-  .full_width {
-      width: 100%;
-}
 
 #header {
   background: url(./Rhino_Logo_Star_Comet_114.png) top left no-repeat;
@@ -422,30 +423,6 @@ body#store_subscribe div#enter_promo_code {
   margin-top: 1ex;
   margin-bottom: 1ex;
 }
-
-#ticket_menus {
-  margin-top: 20px;
-  padding: 0; }
-
-#ticket_menus label {
-  width: 300px;
-  padding-top: 0.7ex; }
-
-#enter_promo_code label {
-  width: 300px; }
-
-#ticket_menus #add_to_cart {
-  margin-left: 300px;
-  padding: 0; }
-
-#ticket_menus *.explanation {
-  margin-left: 300px;
-  padding: 1px;
-  padding-bottom: 2px;
-  /* border: 1px solid #ccc;*/
-  border: 1px solid #891912;
-  border: 1px solid rgba(137, 25, 18, 0.5);
-  color: rgba(137, 25, 18, 0.85); }
 
 #orderTotal {
   font-size: larger;
