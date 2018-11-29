@@ -17,7 +17,7 @@ html {
 }
 body {
   background-color: #e9ddfd;
-  font-family: "Antic Slab", serif;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 #outer_wrapper {
@@ -25,21 +25,18 @@ body {
   background: white;
   width: auto;
   margin: 0 100px 0 100px;
-  height: 100%; }
+}
 
 #inner_wrapper {
   background-color: white;
-  /* change if want to do left sidebar */
-  margin: 0;
+   margin: 0;
   padding: 0 0 10px 0;
   overflow: auto;
-  /* banner links to venue's main site */ }
-  #inner_wrapper a#top_level_banner_link {
+}
+/* banner links to venue's main site */
+#inner_wrapper a#top_level_banner_link {
     margin: 0;
-    padding: 0; }
-
-  .full_width {
-      width: 100%;
+    padding: 0;
 }
 
 #header {
@@ -49,7 +46,8 @@ body {
   /* for CSS3, this should be background-height */
   width: 100%;
   display: inline-block;
-  text-align: left; }
+  text-align: left;
+}
 
 #nav {
   margin-top: -2px; }
@@ -60,38 +58,47 @@ body {
 }
 
 #footer {
-  margin: 0;
-  padding: 20px;
-  color: gray; }
-  #footer a {
-    color: white;
-    font-weight: bold;
-    text-decoration: underline; }
+    background-color: #332943;
+}
+#footer p {
+    text-align: center;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    color: gray;
+}
 
 /* Navigation tabs - don't mess with these unless you know what you're
    doing - it allows the UL environment to create horizontal tabs
- */
-ul.nav {
-  background-color: #ec94a1;
-  border-top: 1px solid white;
-  float: left;
-  width: 100%;
-  list-style: none;
-  border-bottom: none; }
-  ul.nav li {
-      margin: 2px;
-      padding: 0 2px 0 2px;
-      float: left; }
-    ul.nav li a {
-      font-family: PT Sans, sans-serif;
-      color: white;
-      background-color: #ec94a1;
-      padding: 1ex 2ex 1ex 2ex;
-      display: block;
-      text-decoration: none; }
-    ul.nav li a:hover {
-      background-color: #ccc;
-      color: white; }
+*/
+ul.a1-nav {
+    background-color: white;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #dfdfdf;
+    list-style: none;
+    margin-bottom: none !important;
+    border-bottom: none; }
+ul.a1-nav li {
+    font-family: "Antic Slab", serif;
+    margin: 0 2px 2px 2px;
+    padding: 0;
+    float: left; }
+ul.a1-nav li a {
+    color: black;
+    font-size: 12pt;
+    padding: 1ex 2ex 1ex 2ex;
+    display: block;
+    border-top: 2px solid white;
+    text-decoration: none; }
+ul.a1-nav li a:hover {
+    color: #b6120d;
+    border-top: 2px solid #b6120d;
+}
+
+
+ul.a1-nav .active-tab {
+ color: #b6120d;
+    border-top: 2px solid #b6120d;
+}
 
 /* override nav tab color when tab selected */
 body#store_index li#t_store_index a,
@@ -109,18 +116,16 @@ body#showdates_edit li#t_shows_list a,
 body#vouchertypes_list li#t_vouchertypes_list a,
 body#vouchertypes_edit li#t_vouchertypes_list a,
 body#donation_list li#t_donation_list a {
-  background-color: #777; }
+ color: #b6120d;
+ border-top: 2px solid #b6120d;
+}
 
 /* Welcome banner */
 #welcome_header {
-  font: 9pt/11pt Verdana, Helvetica, Arial, sans-serif;
   color: #222222;
-  margin: 1ex auto;
   padding-top: 10px;
-  border-top: 4px solid #7b7775;
-  display: block;
-  clear: both;
-  text-align: center; }
+  border-bottom: 10px solid #7b7775;
+ }
 
 #homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
   display: inline-block;
@@ -139,12 +144,6 @@ pre {
   padding: 10px;
   font-family: Monaco,Courier,fixed; }
 
-h2 {
-  font-size: 1.5em;
-  margin: 6px 0;
-  padding: 0;
-  letter-spacing: 1pt; }
-
 strong, .strong {
   font-weight: bold;
   color: #c03202; }
@@ -153,41 +152,14 @@ em, .emphasis {
   color: #333333;
   font-style: italic; }
 
-form {
-  display: inline; }
-
 fieldset {
   color: #222222;
   border: 1px solid black;
 }
-legend {
-    padding: 4px;
-    margin: 4px;
-}
-
-thead {
-  background-color: #EEE;
-  color: black; }
-
-th {
-  margin: 0;
-  padding: 3px;
-  font-weight: bold;
-  text-align: center;
-  background: #ffa8b1;
-  color: #fff; }
 
 /* 
  * Utility styles - these are used in various places so don't delete
  */
-.invisible {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  font-size: 1px;
-  color: white;
-  border: none; }
 
 .currency {
   text-align: right; }
@@ -196,7 +168,7 @@ th {
   margin: 5px 0 5px 150px;
   padding: 0; }
 
-.t, .top {
+.t {
   vertical-align: top; }
 
 .small {
@@ -204,10 +176,6 @@ th {
 
 .clear {
   clear: both; }
-
-.no_float {
-  float: none;
-  width: 100%; }
 
 .feedback {
   margin: 0;
@@ -227,33 +195,6 @@ th {
 .orderRow {
   padding: 1ex 0 1ex 0;
 }
-
-/* Error messages shown to customers */
-#errorExplanation {
-  width: 400px;
-  border: 2px solid #c03202;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0; }
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 110%;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff; }
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px; }
-
-#errorExplanation ul li {
-  font-size: 110%;
-  list-style: square; }
 
 .explain {
   border: 1px solid #8d3127;
@@ -300,31 +241,6 @@ th {
   background-color: #c03202;
   display: table; }
 
-.disabledField {
-  background-color: #e6e6e6;
-  border: none;
-  color: #000;
-  font-weight: bold; }
-
-/*
- * My Tickets and Reservations page
- */
-#customerVoucherList tbody td, #customerVoucherList td {
-  border-bottom: 3px solid #CCC;
-  text-align: center; }
-
-table#subscriptionReservations tr {
-  line-height: 1.75; }
-
-table#subscriptionReservations td.selectShowdate {
-  /*  width: 25em;*/ }
-
-table#subscriptionReservations .showdate {
-  width: 20em; }
-
-table#subscriptionReservations .action {
-  text-align: center;
-  vertical-align: top; }
 
 /********************
   Cart styles 
@@ -411,32 +327,10 @@ h2.subscription_msg {
   font-size: 0.9em;
   text-align: center; }
 
-/*
- *  Store   //////////////////////////////////////////////////
- */
-/* customer request: hide Promo Code box on Subscriptions sales page */
-body#store_subscribe div#enter_promo_code {
-  display: none; }
-
 #event_types {
   margin-top: 1ex;
   margin-bottom: 1ex;
 }
-
-#ticket_menus {
-  margin-top: 20px;
-  padding: 0; }
-
-#ticket_menus label {
-  width: 300px;
-  padding-top: 0.7ex; }
-
-#enter_promo_code label {
-  width: 300px; }
-
-#ticket_menus #add_to_cart {
-  margin-left: 300px;
-  padding: 0; }
 
 #ticket_menus *.explanation {
   margin-left: 300px;
@@ -460,18 +354,6 @@ body#store_subscribe div#enter_promo_code {
 .storeText {
   text-align: center; }
 
-#donate {
-  margin: 0 0 20px 0;
-  padding: 10px 0;
-  background-color: #f6f6ed; }
-
-#donate_info {
-  margin: 0 auto 10px auto;
-  padding: 5px;
-  width: 400px;
-  background-color: #EEE;
-  color: black;
-  border: 1px solid black; }
 
 /* 
  * Specific messaging for Store and Subscribe pages
@@ -486,133 +368,3 @@ body#store_subscribe div#enter_promo_code {
 
 .storeBanner a {
   color: yellow; }
-
-/***********************************************************************
- * Styles below this point are never seen by regular customers
- **********************************************************************/
-/* 
- * Customer name autocompletion popup
- * Don't modify these unless you know
- * what you're doing
- */
-div.auto_complete {
-  width: 350px;
-  background: #fff; }
-
-div.auto_complete ul {
-  border: 1px solid #888;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  list-style-type: none; }
-
-div.auto_complete ul li {
-  margin: 0;
-  padding: 3px; }
-
-div.auto_complete ul li.selected {
-  background-color: #ffb; }
-
-div.auto_complete ul strong.highlight {
-  color: #800;
-  margin: 0;
-  padding: 0; }
-
-/* Printable receipts */
-/* plain style for receipts */
-body#receipt {
-  background: none;
-  font-family: Helvetica, Arial, sans-serif;
-  color: black;
-  border: 2px solid black;
-  padding: 0.5em;
-  margin: 0.5em;
-  font-size: larger; }
-  body#receipt * {
-    color: black;
-    background: none; }
-
-/*
- * Quick search customer panel
- */
-#customer_quick_search {
-  padding-top: 0;
-  padding-bottom: 0; }
-  #customer_quick_search table {
-    padding: 0;
-    margin: 0; }
-
-#onBehalfOfName {
-  color: blue;
-  font-weight: bold;
-  font-size: larger; }
-
-/*
- * Merge toolbar
- */
-.merge_bar {
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666; }
-
-/*
- * Staff action buttons that appear for a customer (Contact, Prospecting, etc)
- */
-#staffButtons {
-  border-top: 1px groove #fff; }
-
-/*
- * General utility styles
- */
-.totalsRow {
-  font-weight: bold;
-  background-color: #ccc;
-  font-size: larger; }
-
-/* 
- * Edit shows and showdates
- */
-.show_name {
-  font-style: italic; }
-
-table.showdates_summary {
-  border-style: solid;
-  border-color: #000;
-  background-color: #e6e6e6;
-  line-height: normal;
-  padding-left: 20px; }
-  table.showdates_summary th {
-    background-color: #e6e6e6;
-    color: #4c4c4c;
-    text-align: center; }
-  table.showdates_summary td {
-    padding-right: 5px;
-    padding-left: 5px; }
-
-/*
- * Box office functions header ("stats for this show")
- */
-table#showdate_info, table#showdate_info td {
-  border: 0;
-  font-size: larger;
-  width: 600px;
-  text-align: center; }
-
-/*
- * Reports
- */
-/* Advance sales reports */
-div.show .showSalesDate {
-  width: 15em; }
-div.show .showSalesVoucherType {
-  padding-left: 1em;
-  width: 20em; }
-div.show .showSalesDateQty {
-  width: 5em;
-  text-align: left; }
-div.show .showSalesDatePercent, div.show .showSalesPercent {
-  width: 12em; }
-div.show .showSalesDateRevenue {
-  width: 10em;
-  font-weight: bold; }
-div.show .showSalesRevenue {
-  width: 10em; }

@@ -15,45 +15,12 @@ h1, h2, h3 {
       color: maroon;
 }
 
-/* lists */
-
-ol, ul {
-        list-style: none;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-        border-collapse: separate;
-        border-spacing: 0;
-        border: 0;
-	margin-bottom: 10px;
-	margin-top: 4px;
-}
-/* easier to navigate if tabular rows hilited on hover */
-table.hilite tr:hover {
-	background-color: #fcfe69;
-}
 
 fieldset {
   padding: 10px;
   border: 1px solid black;
 }
 
-thead {
-  background-color: #EEE;
-  color: black;
-}
-th {
-  margin: 0;
-  padding: 3px;
-  font-weight: bold;
-  text-align: center;
-  background: #333;
-  color: #fff;
-}
-td {
-  padding: 1px 2px;
-}
 /*
  *  Classes to apply to generic elements
  */
@@ -85,10 +52,6 @@ em, .emphasis {
 .clear {
   clear: both;
 }
-.no_float {
-  float: none;
-  width: 100%;
-}
 .feedback {
   margin: 0;
   padding: 5px;
@@ -116,38 +79,6 @@ em, .emphasis {
 }
 
 
-/* Error messages shown to customers */
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 110%;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 110%;
-  list-style: square;
-}
-
 .explain {
   border: 1px solid #8d3127;
   background: white;
@@ -156,9 +87,6 @@ em, .emphasis {
   vertical-align: top;
  }
 
-/*
- * Generic classes for admin-only visible elements
- */
 .infoMsg {
   color: red;
   margin: 5px 5px;
@@ -166,21 +94,6 @@ em, .emphasis {
   font-size: 125%;
   border: 2px solid red;
  }
-
-.admin {
-   background-color:  #eff19e;
-   color: black;
-}
-.adminDiv {
-   background-color:  #eff19e;
-   display: block;
-}
-.adminField {
-   clear: both;
-   padding: 2px 10px;
-   background-color: #eff19e;
-   color: black;
-}
 
 /* Additional field qualifiers for errors etc */
 
@@ -220,19 +133,17 @@ em, .emphasis {
 #outer_wrapper {
   margin: 0 auto;
   padding: 0;
-  width: 900px;
-  border: 1px solid #EEE;
+  width: 1100px;
   background-color: white;
-  height:  100%;
 }
 #inner_wrapper {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0;
   overflow: auto;
 
 }
 #header {
-  height: 200px;
+  height: 267px;
   width:  100%;
   margin: 0;
   padding: 0;
@@ -240,46 +151,46 @@ em, .emphasis {
   text-align: left;
   background-image: url('./altarena_banner_2017.png');
 }
-#content {
-  padding: 0 4px;
-}
 #footer {
-  margin: 0;
-  padding: 20px;
-  color:  #ddd;
+    width: 100%;
+    background-color: #262626;
+    height: 126px;
 }
-#footer a {
-        color:  white;
-        font-weight: bold;
-        text-decoration:  underline;
+#footer p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 125%;
+    padding-top: 40px;
 }
-
 
 /* Navigation tabs - don't mess with these unless you know what you're
    doing - it allows the UL environment to create horizontal tabs
  */
+
 #themed-nav {
-    width: 100%;
-    display: block;
-    overflow: auto;
-    background-color: #69131c;
+  background-color: #69131c;
+  width: 100%;
+  display: inline-block;
 }
-ul.nav {
+
+ul.a1-nav {
+  padding-left: 0; 
+  margin-bottom: 0;
   float: left;
   width: 100%;
   display: block;
   list-style: none;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
 }
-ul.nav li {
+ul.a1-nav li {
   float:  left;
   border-right: 1px solid #db7141;
-  border-top: 1px solid white;
 }
 
-ul.nav li a {
+ul.a1-nav li a {
   margin: 0;
-  padding: 10px 5px 3px 5px;
+  padding: 3px 5px 3px 5px;
   display: block;
   float: left;
   text-transform: uppercase;
@@ -289,7 +200,7 @@ ul.nav li a {
   background-color: #69131c;
 }
 
-ul.nav li a:hover {
+ul.a1-nav li a:hover {
   background-color: #433637;
 }
 
@@ -308,34 +219,17 @@ body#showdates_edit					li#t_shows_list a,
 body#vouchertypes_list				li#t_vouchertypes_list a,
 body#vouchertypes_edit				li#t_vouchertypes_list a,
 body#donation_list 					li#t_donation_list a {
-        background-color: white;
-        color: #800;
+        background-color: #433637;
+        color: #e7e7e7;
+}
+ul.a1-nav .active-tab {
+    background-color: #433637;
+    color: #e7e7e7;
 }
 
 /*
  * Welcome banner elements
  */
-
-.welcomeBanner {
-  font-size: 125%;
-  font-weight: bold;
-}
-
-#logged_in {
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 1em;
-  background-color: #EEE;
-  color: #444;
-}
-#welcome {
-        color: #787878;
-        padding: 5px;
-        font: italic 10pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-#logged_in_welcome .button-to, #welcome .gen_button {
-        display: inline;
-}
 
 #homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
 	display: inline-block;
@@ -345,9 +239,6 @@ body#donation_list 					li#t_donation_list a {
 /* Welcome banner */
 #welcome_header {
 	clear:  both;
-}
-#admin_welcome_header {
-        clear: both;
 }
 
 /********************
@@ -481,23 +372,6 @@ fieldset#admin_form {
   margin-top: 1ex;
   margin-bottom: 1ex;
 }
-/*
-#ticket_menus {
-  margin-top: 20px;
-  padding: 0;
-}
-#ticket_menus label {
-  width: 300px;
-  padding-top: 0.7ex;
-}
-#enter_promo_code label {
-	width: 300px;
-}
-*/
-#ticket_menus #add_to_cart {
-  margin-left: 300px;
-  padding: 0;
-}
 #ticket_menus *.explanation {
   margin-left: 300px;
   padding:  1px;
@@ -517,19 +391,6 @@ fieldset#admin_form {
 #orderTotal input {
   font-size: inherit;
 }
-#donate {
-  margin: 0 0 20px 0;
-  padding: 10px 0;
-  background-color: #f6f6ed;
-}
-#donate_info {
-  margin: 0 auto 10px auto;
-  padding: 5px;
-  width: 400px;
-  background-color: #EEE;
-  color: black;
-  border: 1px solid black;
-}
 
 /* 
  * Specific messaging for Store and Subscribe pages
@@ -546,170 +407,4 @@ fieldset#admin_form {
 
 .storeBanner a {
   color: yellow;
-}
-
-/***********************************************************************
- * Styles below this point are never seen by regular customers
- **********************************************************************/
-
-/* 
- * Customer name autocompletion popup
- * Don't modify these unless you know
- * what you're doing
- */
-
-div.auto_complete {
-	width: 350px;
-	background: #fff;
-}
-
-div.auto_complete ul {
-	border: 1px solid #888;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	list-style-type: none;
-}
-
-div.auto_complete ul li {
-	margin: 0;
-	padding: 3px;
-}
-
-div.auto_complete ul li.selected {
-	background-color: #ffb;
-}
-
-div.auto_complete ul strong.highlight {
-	color: #800;
-	margin: 0;
-	padding: 0;
-}
-
-
-/* 
- * plain style for receipts 
- */
-body#receipt { 
-  background: none;
-  font-family: Helvetica, Arial, sans-serif;
-  color: black;
-  border: 2px solid black;
-  padding: 0.5em;
-  margin: 0.5em;
-  font-size: larger;
-}
-body#receipt * {
-  color: black;
-  background: none;
-}
-
-/*
- * Quick search customer panel
- */
-#customer_quick_search {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-#customer_quick_search table {
-	padding: 0;
-	margin: 0;
-}
-#onBehalfOfName {
-	color: blue;
-	font-weight: bold;
-	font-size:  larger;
-}
-
-/*
- * Merge toolbar
- */
-
-.merge_bar {
-    border-top: 1px solid #666;
-    border-bottom: 1px solid #666;
-}
-
-/*
- * Staff action buttons that appear for a customer (Contact, Prospecting, etc)
- */
-#staffButtons {
-	border-top: 1px groove #fff;
-}
-
-/*
- * General utility styles
- */
-.totalsRow {
-  font-weight: bold;
-  background-color: #ccc;
-  font-size: larger;
- }
-
-
-/* 
- * Edit shows and showdates
- */
-
-.show_name {
-	font-style: italic;
-}
-table.showdates_summary {
-	border-style: solid;
-	border-color: #000;
-	background-color: #e6e6e6;
-	line-height: normal;
-	padding-left: 20px;
-}
-table.showdates_summary th {
-	background-color: #e6e6e6;
-	color: #4c4c4c;
-	text-align: center;
-}
-table.showdates_summary td {
-	padding-right: 5px;
-	padding-left: 5px;
-}
-
-
-
-/*
- * Box office functions header ("stats for this show")
- */
- 
- table#showdate_info, table#showdate_info td {
-	border: 0;
-	font-size: larger;
-	width: 600px;
-	text-align: center;
-}
-
-/*
- * Reports
- */
-
-/* Advance sales reports */
-
-
-
-div.show .showSalesDate {
-  width: 15em;
-}
-div.show .showSalesVoucherType {
-  padding-left: 1em;
-  width: 20em;
-}
-div.show .showSalesDateQty {
-  width: 5em;
-  text-align: left;
-}
-div.show .showSalesDatePercent, div.show .showSalesPercent {
-  width: 12em;
-}
-div.show .showSalesDateRevenue {
-  width: 10em;
-  font-weight: bold;
-}
-div.show .showSalesRevenue {
-  width: 10em;
 }
