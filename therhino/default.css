@@ -12,19 +12,23 @@
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
 */
-html {
-    font-size: 11pt;
+@media (min-device-width: 800px) {
+    html {
+        font-size: 11pt;
+    }
 }
 body {
   background-color: #e9ddfd;
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-#outer_wrapper {
-  line-height: 1;
-  background: white;
-  width: auto;
-  margin: 0 100px 0 100px;
+@media (min-device-width: 800px) {
+    #outer_wrapper {
+        line-height: 1;
+        background: white;
+        width: auto;
+        margin: 0 100px 0 100px;
+    }
 }
 
 #inner_wrapper {
