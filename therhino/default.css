@@ -261,33 +261,6 @@ h2.subscription_msg {
   font-size: 0.9em;
   text-align: center; }
 
-#event_types {
-  margin-top: 1ex;
-  margin-bottom: 1ex;
-}
-
-#ticket_menus *.explanation {
-  margin-left: 300px;
-  padding: 1px;
-  padding-bottom: 2px;
-  /* border: 1px solid #ccc;*/
-  border: 1px solid #891912;
-  border: 1px solid rgba(137, 25, 18, 0.5);
-  color: rgba(137, 25, 18, 0.85); }
-
-#orderTotal {
-  font-size: larger;
-  font-weight: bold;
-  vertical-align: bottom;
-  color: #c03202;
-  background-color: #eee; }
-
-#orderTotal input {
-  font-size: inherit; }
-
-.storeText {
-  text-align: center; }
-
 
 /* 
  * Specific messaging for Store and Subscribe pages
