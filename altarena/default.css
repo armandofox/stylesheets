@@ -97,30 +97,6 @@ em, .emphasis {
   border: 2px solid red;
  }
 
-/* Additional field qualifiers for errors etc */
-
-.validationError {
-  color: red;
- }
-
-.highlighted {
-  background-color: #9f9;
-}
-
-.fieldWithErrors {
-  padding: 2px;
-  color: white;
-  background-color: red;
-  display: table;
-}
-
-.disabledField {
-	background-color: #e6e6e6;
-	border: none;
-	color: #000;
-	font-weight: bold;
-}
-
 
 /*
  * Page structure: 
@@ -132,14 +108,17 @@ em, .emphasis {
  *      content (main page)
  *  footer    (Audience1st footer)
 */
-@media (min-device-width: 800px) {
     #outer_wrapper {
         margin: 0 auto;
         padding: 0;
-        width: 1100px;
         background-color: white;
     }
+
+@media (min-device-width: 900px) {
+    #outer_wrapper { width: 900px; }
 }
+
+
 #inner_wrapper {
   margin: 0;
   padding: 0;

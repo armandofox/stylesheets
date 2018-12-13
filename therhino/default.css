@@ -53,9 +53,6 @@ body {
   text-align: left;
 }
 
-#nav {
-  margin-top: -2px; }
-
 #content {
   padding: 0 4px;
   color: #981c17;
@@ -216,35 +213,6 @@ fieldset {
   padding: 5px 5px;
   font-size: 125%;
   border: 2px solid #333333; }
-
-.admin {
-  background-color: #eff19e;
-  color: black; }
-
-.adminDiv {
-  background-color: #eff19e;
-  display: block; }
-
-.adminField {
-  font-family: PT Sans, sans-serif;
-  clear: both;
-  padding: 2px 10px;
-  background-color: #eff19e;
-  color: black; }
-
-/* Additional field qualifiers for errors etc */
-.validationError {
-  color: #c03202; }
-
-.highlighted {
-  background-color: #9f9; }
-
-.fieldWithErrors {
-  padding: 2px;
-  color: white;
-  background-color: #c03202;
-  display: table; }
-
 
 /********************
   Cart styles 
