@@ -213,15 +213,17 @@ em, .emphasis {
  *      content (main page)
  *  footer    (Audience1st footer)
 */
-@media (min-device-width: 800px) {
+@media (min-device-width: 900px) {
+    #outer_wrapper {
+          width: 900px;
+    }
+}
 #outer_wrapper {
   margin: 0 auto;
   padding: 0;
-  width: 900px;
   border: 1px solid #EEE;
   background-color: white;
   height:  100%;
-}
 }
 
 #inner_wrapper {
