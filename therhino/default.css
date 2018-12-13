@@ -103,6 +103,7 @@ ul.a1-nav .active-tab {
 
 /* override nav tab color when tab selected */
 body#store_index li#t_store_index a,
+body#customers_index li#t_customers_index a,
 body#customers_show li#t_customers_show a,
 body#customers_show_subscriber li#t_customers_show a,
 body#customers_edit li#t_customers_edit a,
@@ -120,13 +121,6 @@ body#donation_list li#t_donation_list a {
  color: #b6120d;
  border-top: 2px solid #b6120d;
 }
-
-/* Welcome banner */
-#welcome_header {
-  color: #222222;
-  padding-top: 10px;
-  border-bottom: 10px solid #7b7775;
- }
 
 #homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
   display: inline-block;
@@ -148,10 +142,6 @@ pre {
 strong, .strong {
   font-weight: bold;
   color: #c03202; }
-
-em, .emphasis {
-  color: #333333;
-  font-style: italic; }
 
 fieldset {
   color: #222222;
@@ -175,24 +165,6 @@ fieldset {
 .small {
   font-size: 0.8em; }
 
-.clear {
-  clear: both; }
-
-.feedback {
-  margin: 0;
-  padding: 5px;
-  background-color: #ddc;
-  color: #555; }
-
-.notice {
-  margin: 3px 0;
-  padding: 5px;
-  background-color: #EEE;
-  color: black;
-  line-height: 1.5;
-  text-align: center;
-  font-size: larger; }
-
 .orderRow {
   padding: 1ex 0 1ex 0;
 }
@@ -203,16 +175,6 @@ fieldset {
   padding: 2px 2px;
   margin: 2px 2px;
   vertical-align: top; }
-
-/*
- * Generic classes for admin-only visible elements
- */
-.infoMsg {
-  color: #333333;
-  margin: 5px 5px;
-  padding: 5px 5px;
-  font-size: 125%;
-  border: 2px solid #333333; }
 
 /********************
   Cart styles 

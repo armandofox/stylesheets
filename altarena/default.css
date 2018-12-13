@@ -31,10 +31,6 @@ strong, .strong {
   font-weight: bold;
   color: red;
 }
-em, .emphasis {
-  color: red;
-  font-style: italic;
-}
 /* 
  * Utility styles - these are used in various places so don't delete
  */
@@ -51,36 +47,6 @@ em, .emphasis {
 .small {
   font-size: 0.8em;
 }
-.clear {
-  clear: both;
-}
-.feedback {
-  margin: 0;
-  padding: 5px;
-  background-color: #ddc;
-  color: #555;
-}
-.notice {
-  margin: 3px 0;
-  padding: 5px;
-  background-color: #EEE;
-  color: maroon;
-  border: 1px solid #CCC;
-  line-height: 1.5;
-	text-align: center;
-	font-size: larger;
-}
-
-.warning {
-  margin: 3px 20px;
-  color: red;
-  border: 1px solid red;
-  line-height: 1.2;
-  font-weight: bold;
-  padding: 6px 10px;
-}
-
-
 .explain {
   border: 1px solid #8d3127;
   background: white;
@@ -88,15 +54,6 @@ em, .emphasis {
   margin: 2px 2px;
   vertical-align: top;
  }
-
-.infoMsg {
-  color: red;
-  margin: 5px 5px;
-  padding: 5px 5px;
-  font-size: 125%;
-  border: 2px solid red;
- }
-
 
 /*
  * Page structure: 
@@ -189,6 +146,7 @@ ul.a1-nav li a:hover {
 
 /* override nav tab color when tab selected */
 body#store_index                    li#t_store_index a, 
+body#customers_index                li#t_customers_index a,
 body#customers_show                 li#t_customers_show a, 
 body#customers_edit                 li#t_customers_edit a, 
 body#customers_change_password_for      li#t_customers_change_password_for a,
@@ -217,11 +175,6 @@ ul.a1-nav .active-tab {
 #homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
 	display: inline-block;
 	margin: 10px 0 8px 0;
-}
-
-/* Welcome banner */
-#welcome_header {
-	clear:  both;
 }
 
 /********************
@@ -351,6 +304,7 @@ fieldset#admin_form {
 /*
  *  Store   //////////////////////////////////////////////////
  */
+/*
 #event_types {
   margin-top: 1ex;
   margin-bottom: 1ex;
@@ -374,7 +328,7 @@ fieldset#admin_form {
 #orderTotal input {
   font-size: inherit;
 }
-
+*/
 /* 
  * Specific messaging for Store and Subscribe pages
  */
