@@ -221,7 +221,7 @@ span.cart_item_desc {
   background-color: transparent;
   color: maroon;
   font-weight: bold; }
-
+p
 #cart_total {
   margin-top: 2px;
   padding: 2px;
@@ -243,24 +243,6 @@ span.cart_item_desc {
   font-weight: bold;
   color: maroon;
   line-height: 1.4; }
-
-h2.subscription_msg {
-  margin: 0;
-  padding: 10px;
-  background-color: #EEE;
-  color: #057;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 150%;
-  text-align: center;
-  letter-spacing: normal; }
-
-.subscription_msg2 {
-  margin-top: 3px;
-  padding: 0;
-  font-size: 0.9em;
-  text-align: center; }
-
 
 /* 
  * Specific messaging for Store and Subscribe pages

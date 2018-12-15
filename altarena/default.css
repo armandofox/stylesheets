@@ -65,12 +65,11 @@ strong, .strong {
  *      content (main page)
  *  footer    (Audience1st footer)
 */
-    #outer_wrapper {
-        margin: 0 auto;
-        padding: 0;
-        background-color: white;
-    }
-
+#outer_wrapper {
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+}
 @media (min-device-width: 900px) {
     #outer_wrapper { width: 900px; }
 }
@@ -80,16 +79,24 @@ strong, .strong {
   margin: 0;
   padding: 0;
   overflow: auto;
-
 }
+
 #header {
-  height: 267px;
-  width:  100%;
-  margin: 0;
-  padding: 0;
-  background-repeat: no-repeat;
-  text-align: left;
-  background-image: url('./altarena_banner_2017.png');
+    width:  100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+@media(min-device-width: 900px) {
+    #header {
+        height: 267px;
+        background-image: url('./altarena_banner_2017.png');
+    }
+}
+@media(max-width: 480px) {
+    #header {
+        background-image: url('./altarena_banner_small.png');
+    }
 }
 #footer {
     width: 100%;
@@ -185,10 +192,6 @@ div#cart {
   padding: 10px;
   border: 3px double #CCC;
 }
-p#empty_cart {
-
-}
-ol#cart_items { }
 li.cart_item {
   margin: 0;
   padding: 3px;
@@ -253,52 +256,6 @@ font-weight: bold;
         font-weight: bold;
         color:  maroon;
         line-height: 1.4
-}
-h2.subscription_msg {
-  margin: 0;
-  padding: 10px;
-  background-color: #EEE;
-  color: #057;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 150%;
-  text-align: center;
-  letter-spacing: normal;
-}
-.subscription_msg2 {
-  margin-top: 3px;
-  padding: 0;
-  font-size: 0.9em;
-  text-align: center;
-}
-
-#have_account {
-  margin: 0;
-  padding: 10px;
-
-  float: left;
-  width: 475px;
-
-  /*border: 1px solid red;*/
-  border-right: 5px double black;
-}
-#new_customer {
-  margin: 0;
-  padding: 10px;
-
-  float: left;
-  width: 200px;
-
-  /*border: 1px solid green;*/
-}
-
-fieldset#FAQ {
-  border: 1px solid red;
-}
-
-fieldset#admin_form {
-  color: black;
-  border: 1px solid black;
 }
 
 /* 
