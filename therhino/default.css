@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Antic+Slab|PT+Sans');
+
+/*
+ * Page structure: 
+ * body
+ *  #outer_wrapper
+ *    #outer_header
+ *    #inner_wrapper (main content of page)
+ *      #header  (your organization's banner, etc)
+ *      .nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *      #content (main page content)
+ *      #welcome_header (login/logout buttons)
+ *  #footer    (Audience1st footer)
+*/
+@media (min-device-width: 800px) {
+    html {
+        font-size: 11pt;
+    }
+}
+    
+body {
+  background-color: #e9ddfd;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+@media (min-device-width: 800px) {
+    #outer_wrapper {
+        line-height: 1;
+        background: white;
+        width: auto;
+        margin: 0 100px 0 100px;
+    }
+}
+
+#inner_wrapper {
+  background-color: white;
+   margin: 0;
+  padding: 0 0 10px 0;
+  overflow: auto;
+}
+/* banner links to venue's main site */
+#inner_wrapper a#top_level_banner_link {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+  background: url(./Rhino_Logo_Star_Comet_114.png) top left no-repeat;
+  margin-left: 2em;
+  height: 139px;
+  /* for CSS3, this should be background-height */
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+}
+
+#content {
+  padding: 0 4px;
+  color: #981c17;
+}
+
+#footer {
+    background-color: #332943;
+}
+#footer p {
+    text-align: center;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+*/
+ul.a1-nav {
+    background-color: white;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #dfdfdf;
+    list-style: none;
+    margin-bottom: none !important;
+    border-bottom: none; }
+ul.a1-nav li {
+    font-family: "Antic Slab", serif;
+    margin: 0 2px 2px 2px;
+    padding: 0;
+    float: left; }
+ul.a1-nav li a {
+    color: black;
+    font-size: 12pt;
+    padding: 1ex 2ex 1ex 2ex;
+    display: block;
+    border-top: 2px solid white;
+    text-decoration: none; }
+ul.a1-nav li a:hover {
+    color: #b6120d;
+    border-top: 2px solid #b6120d;
+}
+
+
+ul.a1-nav .active-tab {
+ color: #b6120d;
+    border-top: 2px solid #b6120d;
+}
+
+/* override nav tab color when tab selected */
+body#store_index li#t_store_index a,
+body#customers_index li#t_customers_index a,
+body#customers_show li#t_customers_show a,
+body#customers_show_subscriber li#t_customers_show a,
+body#customers_edit li#t_customers_edit a,
+body#customers_change_password_for li#t_customers_change_password_for a,
+body#store_donate li#t_store_donate a,
+body#report_index li#t_report_index a,
+body#box_office_walkup li#t_box_office_walkup a,
+body#options_edit li#t_options_edit a,
+body#shows_list li#t_shows_list a,
+body#shows_edit li#t_shows_list a,
+body#showdates_edit li#t_shows_list a,
+body#vouchertypes_list li#t_vouchertypes_list a,
+body#vouchertypes_edit li#t_vouchertypes_list a,
+body#donation_list li#t_donation_list a {
+ color: #b6120d;
+ border-top: 2px solid #b6120d;
+}
+
+#homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
+  display: inline-block;
+  margin: 10px 0 8px 0; }
+
+/* text links */
+a {
+  text-decoration: none;
+  color: #c03202; }
+  a:hover {
+    text-decoration: underline; }
+
+/* basic paragraphs and headers */
+
+pre {
+  padding: 10px;
+  font-family: Monaco,Courier,fixed; }
+
+strong, .strong {
+  font-weight: bold;
+  color: #c03202; }
+
+fieldset {
+  color: #222222;
+  border: 1px solid black;
+}
+
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.currency {
+  text-align: right; }
+
+.indented {
+  margin: 5px 0 5px 150px;
+  padding: 0; }
+
+.t {
+  vertical-align: top; }
+
+.small {
+  font-size: 0.8em; }
+
+.orderRow {
+  padding: 1ex 0 1ex 0;
+}
+
+.explain {
+  border: 1px solid #8d3127;
+  background: white;
+  padding: 2px 2px;
+  margin: 2px 2px;
+  vertical-align: top; }
+
+/********************
+  Cart styles 
+ ********************/
+div#cart {
+  margin: 5px 0;
+  padding: 10px;
+  border: 3px double #CCC; }
+
+li.cart_item {
+  margin: 0;
+  padding: 3px; }
+
+.price_and_actions {
+  margin: 0;
+  padding-left: 5px;
+  width: 20%;
+  float: right; }
+
+.price_and_actions .actions {
+  float: right; }
+
+span.cart_item_desc {
+  display: block; }
+
+.voucher_show_name {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  font-size: 150%;
+  color: #800000; }
+
+.voucher_show_date {
+  font-style: italic; }
+
+.voucher_type {
+  margin: 0;
+  padding: 0 3px;
+  background-color: transparent;
+  color: #444; }
+
+.donation_name {
+  background-color: transparent;
+  color: maroon;
+  font-weight: bold; }
+p
+#cart_total {
+  margin-top: 2px;
+  padding: 2px;
+  background-color: #666;
+  color: white;
+  border: 1px solid #EEE; }
+
+#total_price {
+  display: block;
+  float: right;
+  font-weight: bold;
+  width: 20%; }
+
+/************************
+ * Page-specific styles 
+ ************************/
+/* "show my tickets" page */
+.showName {
+  font-weight: bold;
+  color: maroon;
+  line-height: 1.4; }
+
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+.storeBanner {
+  background-color: maroon;
+  color: white;
+  padding: 5px;
+  margin: 4px;
+  text-align: center;
+}
+
+.storeBanner a {
+  color: yellow; }

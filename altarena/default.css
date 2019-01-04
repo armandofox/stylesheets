@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Merriweather');
+
+@media (min-device-width: 800px) {
+    html {
+        font-size: 10pt;
+    }
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  background-color: #671e22;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+      color: maroon;
+}
+
+fieldset {
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid black;
+}
+
+/*
+ *  Classes to apply to generic elements
+ */
+
+strong, .strong {
+  font-weight: bold;
+  color: red;
+}
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.currency {
+  text-align: right;
+}
+.indented {
+  margin: 5px 0 5px 150px;
+  padding: 0;
+}
+.t { vertical-align: top; }
+
+.small {
+  font-size: 0.8em;
+}
+.explain {
+  border: 1px solid #8d3127;
+  background: white;
+  padding: 2px 2px;
+  margin: 2px 2px;
+  vertical-align: top;
+ }
+
+/*
+ * Page structure: 
+ *  outer_wrapper
+ *    outer_header
+ *    inner_wrapper (main content of page)
+ *      header  (your organization's banner, etc)
+ *      nav     (nav tabs bar)
+ *      content (main page)
+ *  footer    (Audience1st footer)
+*/
+@media (min-device-width: 900px) {
+    #outer_wrapper {
+          width: 900px;
+    }
+}
+#outer_wrapper {
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+}
+@media (min-device-width: 900px) {
+    #outer_wrapper { width: 900px; }
+}
+
+#inner_wrapper {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+#header {
+    width:  100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+@media(min-device-width: 900px) {
+    #header {
+        height: 267px;
+        background-image: url('./altarena_banner_2017.png');
+    }
+}
+@media(max-width: 480px) {
+    #header {
+        background-image: url('./altarena_banner_small.png');
+    }
+}
+#footer {
+    width: 100%;
+    background-color: #262626;
+    height: 126px;
+}
+#footer p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 125%;
+    padding-top: 40px;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+ */
+
+#themed-nav {
+  background-color: #69131c;
+  width: 100%;
+  display: inline-block;
+}
+
+ul.a1-nav {
+  padding-left: 0; 
+  margin-bottom: 0;
+  float: left;
+  width: 100%;
+  display: block;
+  list-style: none;
+  border-bottom: 1px solid white;
+}
+ul.a1-nav li {
+  float:  left;
+  border-right: 1px solid #db7141;
+}
+
+ul.a1-nav li a {
+  margin: 0;
+  padding: 3px 5px 3px 5px;
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color:  white;
+  background-color: #69131c;
+}
+
+ul.a1-nav li a:hover {
+  background-color: #433637;
+}
+
+/* override nav tab color when tab selected */
+body#store_index                    li#t_store_index a, 
+body#customers_index                li#t_customers_index a,
+body#customers_show                 li#t_customers_show a, 
+body#customers_edit                 li#t_customers_edit a, 
+body#customers_change_password_for      li#t_customers_change_password_for a,
+body#store_donate li#t_store_donate a,
+body#report_index                   li#t_report_index a,  
+body#box_office_walkup	            li#t_box_office_walkup a,
+body#options_edit                   li#t_options_edit a,
+body#shows_list						li#t_shows_list a,
+body#shows_edit						li#t_shows_list a,
+body#showdates_edit					li#t_shows_list a,
+body#vouchertypes_list				li#t_vouchertypes_list a,
+body#vouchertypes_edit				li#t_vouchertypes_list a,
+body#donation_list 					li#t_donation_list a {
+        background-color: #433637;
+        color: #e7e7e7;
+}
+ul.a1-nav .active-tab {
+    background-color: #433637;
+    color: #e7e7e7;
+}
+
+/*
+ * Welcome banner elements
+ */
+
+#homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
+	display: inline-block;
+	margin: 10px 0 8px 0;
+}
+
+/********************
+  Cart styles 
+ ********************/
+div#cart {
+  margin: 5px 0;
+  padding: 10px;
+  border: 3px double #CCC;
+}
+li.cart_item {
+  margin: 0;
+  padding: 3px;
+}
+.price_and_actions {
+  margin: 0;
+  padding-left: 5px;
+  width: 20%;
+  float: right;
+}
+.price_and_actions .actions {
+  float: right;
+}
+.cart_item_price { }
+span.cart_item_desc {
+  display: block;
+}
+.voucher_show_name {
+  text-decoration: none;
+        text-transform: capitalize;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-variant: small-caps;
+        font-size: 150%;
+        color: #800000;
+}
+.voucher_show_date {
+  font-style: italic;
+}
+.voucher_type {
+  margin: 0;
+  padding: 0 3px;
+  background-color: transparent;
+  color: #444;
+}
+.promo_code { }
+.donation_name, .retail_item_description {
+  background-color: transparent;
+color:  maroon;
+font-weight: bold;
+}
+#cart_total {
+  margin-top:  2px;
+  padding: 2px;
+  background-color: #666;
+  color: white;
+  border: 1px solid #EEE;
+}
+#total_price {
+  display: block;
+  float: right;
+  font-weight:  bold;
+  width: 20%;
+}
+
+
+/************************
+ * Page-specific styles 
+ ************************/
+
+/* "show my tickets" page */
+.showName {
+        font-weight: bold;
+        color:  maroon;
+        line-height: 1.4
+}
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+
+.storeBanner {
+  background-color: maroon;
+  color: white;
+  padding: 5px;
+  margin: 4px;
+  text-align: center;
+	font: italic large Georgia, "Times New Roman", Times, serif;
+}
+
+.storeBanner a {
+  color: yellow;
+}
