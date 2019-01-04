@@ -17,6 +17,7 @@ h1, h2, h3 {
       color: maroon;
 }
 
+
 fieldset {
   padding: 10px;
   margin: 2px;
@@ -65,11 +66,6 @@ strong, .strong {
  *      content (main page)
  *  footer    (Audience1st footer)
 */
-@media (min-device-width: 900px) {
-    #outer_wrapper {
-          width: 900px;
-    }
-}
 #outer_wrapper {
     margin: 0 auto;
     padding: 0;
@@ -78,6 +74,7 @@ strong, .strong {
 @media (min-device-width: 900px) {
     #outer_wrapper { width: 900px; }
 }
+
 
 #inner_wrapper {
   margin: 0;
@@ -261,6 +258,7 @@ font-weight: bold;
         color:  maroon;
         line-height: 1.4
 }
+
 /* 
  * Specific messaging for Store and Subscribe pages
  */
