@@ -2,13 +2,13 @@
 
 @media (min-device-width: 800px) {
     html {
-        font-size: 10pt;
+        font-size: 11pt;
     }
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  color: #333;
+  color: black;
   background-color: #671e22;
 }
 
@@ -183,68 +183,6 @@ ul.a1-nav .active-tab {
 #homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
 	display: inline-block;
 	margin: 10px 0 8px 0;
-}
-
-/********************
-  Cart styles 
- ********************/
-div#cart {
-  margin: 5px 0;
-  padding: 10px;
-  border: 3px double #CCC;
-}
-li.cart_item {
-  margin: 0;
-  padding: 3px;
-}
-.price_and_actions {
-  margin: 0;
-  padding-left: 5px;
-  width: 20%;
-  float: right;
-}
-.price_and_actions .actions {
-  float: right;
-}
-.cart_item_price { }
-span.cart_item_desc {
-  display: block;
-}
-.voucher_show_name {
-  text-decoration: none;
-        text-transform: capitalize;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-variant: small-caps;
-        font-size: 150%;
-        color: #800000;
-}
-.voucher_show_date {
-  font-style: italic;
-}
-.voucher_type {
-  margin: 0;
-  padding: 0 3px;
-  background-color: transparent;
-  color: #444;
-}
-.promo_code { }
-.donation_name, .retail_item_description {
-  background-color: transparent;
-color:  maroon;
-font-weight: bold;
-}
-#cart_total {
-  margin-top:  2px;
-  padding: 2px;
-  background-color: #666;
-  color: white;
-  border: 1px solid #EEE;
-}
-#total_price {
-  display: block;
-  float: right;
-  font-weight:  bold;
-  width: 20%;
 }
 
 
