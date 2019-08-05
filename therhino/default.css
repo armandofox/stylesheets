@@ -11,16 +11,16 @@
  *      #content (main page content)
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
-*/
+ */
 @media (min-device-width: 800px) {
     html {
         font-size: 11pt;
     }
 }
-    
+
 body {
-  background-color: #e9ddfd;
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    background-color: #e9ddfd;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 @media (min-device-width: 800px) {
@@ -33,10 +33,10 @@ body {
 }
 
 #inner_wrapper {
-  background-color: white;
-   margin: 0;
-  padding: 0 0 10px 0;
-  overflow: auto;
+    background-color: white;
+    margin: 0;
+    padding: 0 0 10px 0;
+    overflow: auto;
 }
 /* banner links to venue's main site */
 #inner_wrapper a#top_level_banner_link {
@@ -45,18 +45,18 @@ body {
 }
 
 #header {
-  background: url(./Rhino_Logo_Star_Comet_114.png) top left no-repeat;
-  margin-left: 2em;
-  height: 139px;
-  /* for CSS3, this should be background-height */
-  width: 100%;
-  display: inline-block;
-  text-align: left;
+    background: url(./Rhino_Logo_Star_Comet_114.png) top left no-repeat;
+    margin-left: 2em;
+    height: 139px;
+    /* for CSS3, this should be background-height */
+    width: 100%;
+    display: inline-block;
+    text-align: left;
 }
 
 #content {
-  padding: 0 4px;
-  color: #981c17;
+    padding: 0 4px;
+    color: #981c17;
 }
 
 #footer {
@@ -98,7 +98,7 @@ ul.a1-nav li a:hover {
 
 
 ul.a1-nav .active-tab {
- color: #b6120d;
+    color: #b6120d;
     border-top: 2px solid #b6120d;
 }
 
@@ -113,32 +113,33 @@ body#store_donate li#t_store_donate a,
 body#report_index li#t_report_index a,
 body#box_office_walkup li#t_box_office_walkup a,
 body#options_edit li#t_options_edit a,
-body#shows_list li#t_shows_list a,
-body#shows_edit li#t_shows_list a,
-body#showdates_edit li#t_shows_list a,
-body#vouchertypes_list li#t_vouchertypes_list a,
-body#vouchertypes_edit li#t_vouchertypes_list a,
-body#donation_list li#t_donation_list a {
- color: #b6120d;
- border-top: 2px solid #b6120d;
+body#shows_index li#t_shows_index a,
+body#shows_edit li#t_shows_index a,
+body#showdates_edit li#t_shows_index a,
+body#vouchertypes_index li#t_vouchertypes_index a,
+body#vouchertypes_index li#t_vouchertypes_index a,
+body#donations_index li#t_donations_index a,
+ul.a1-nav .active-tab {
+    color: #b6120d;
+    border-top: 2px solid #b6120d;
 }
 
 /* text links */
 a {
-  text-decoration: none;
-  color: #c03202; }
-  a:hover {
+    text-decoration: none;
+    color: #c03202; }
+a:hover {
     text-decoration: underline; }
 
 /* basic paragraphs and headers */
 
 strong, .strong {
-  font-weight: bold;
-  color: #c03202; }
+    font-weight: bold;
+    color: #c03202; }
 
 fieldset {
-  color: #222222;
-  border: 1px solid black;
+    color: #222222;
+    border: 1px solid black;
 }
 
 /* 
@@ -146,31 +147,31 @@ fieldset {
  */
 
 .explain {
-  border: 1px solid #8d3127;
-  background: white;
-  padding: 2px 2px;
-  margin: 2px 2px;
-  vertical-align: top; }
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top; }
 
 /************************
  * Page-specific styles 
  ************************/
 /* "show my tickets" page */
 .showName {
-  font-weight: bold;
-  color: maroon;
-  line-height: 1.4; }
+    font-weight: bold;
+    color: maroon;
+    line-height: 1.4; }
 
 /* 
  * Specific messaging for Store and Subscribe pages
  */
 .storeBanner {
-  background-color: maroon;
-  color: white;
-  padding: 5px;
-  margin: 4px;
-  text-align: center;
+    background-color: maroon;
+    color: white;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
 }
 
 .storeBanner a {
-  color: yellow; }
+    color: yellow; }

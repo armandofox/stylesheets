@@ -7,21 +7,21 @@
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  color: black;
-  background-color: #671e22;
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+    background-color: #671e22;
 }
 
 h1, h2, h3 {
-  font-weight: bold;
-      color: maroon;
+    font-weight: bold;
+    color: maroon;
 }
 
 
 fieldset {
-  padding: 10px;
-  margin: 2px;
-  border: 1px solid black;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid black;
 }
 
 /*
@@ -29,20 +29,20 @@ fieldset {
  */
 
 strong, .strong {
-  font-weight: bold;
-  color: red;
+    font-weight: bold;
+    color: red;
 }
 /* 
  * Utility styles - these are used in various places so don't delete
  */
 
 .explain {
-  border: 1px solid #8d3127;
-  background: white;
-  padding: 2px 2px;
-  margin: 2px 2px;
-  vertical-align: top;
- }
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top;
+}
 
 /*
  * Page structure: 
@@ -53,21 +53,21 @@ strong, .strong {
  *      nav     (nav tabs bar)
  *      content (main page)
  *  footer    (Audience1st footer)
-*/
+ */
 #outer_wrapper {
     margin: 0 auto;
     padding: 0;
     background-color: white;
 }
-@media (min-device-width: 900px) {
-    #outer_wrapper { width: 900px; }
+@media (min-device-width: 1100px) {
+    #outer_wrapper { width: 1100px; }
 }
 
 
 #inner_wrapper {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 }
 
 #header {
@@ -102,42 +102,43 @@ strong, .strong {
 
 /* Navigation tabs - don't mess with these unless you know what you're
    doing - it allows the UL environment to create horizontal tabs
- */
+*/
 
 #themed-nav {
-  background-color: #69131c;
-  width: 100%;
-  display: inline-block;
+    background-color: #69131c;
+    width: 100%;
+    display: inline-block;
 }
 
 ul.a1-nav {
-  padding-left: 0; 
-  margin-bottom: 0;
-  float: left;
-  width: 100%;
-  display: block;
-  list-style: none;
-  border-bottom: 1px solid white;
+    font-size: 10pt;
+    padding-left: 0; 
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+    display: block;
+    list-style: none;
+    border-bottom: 1px solid white;
 }
 ul.a1-nav li {
-  float:  left;
-  border-right: 1px solid #db7141;
+    float:  left;
+    border-right: 1px solid #db7141;
 }
 
 ul.a1-nav li a {
-  margin: 0;
-  padding: 3px 5px 3px 5px;
-  display: block;
-  float: left;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color:  white;
-  background-color: #69131c;
+    margin: 0;
+    padding: 3px 5px 3px 5px;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color:  white;
+    background-color: #69131c;
 }
 
 ul.a1-nav li a:hover {
-  background-color: #433637;
+    background-color: #433637;
 }
 
 /* override nav tab color when tab selected */
@@ -150,15 +151,12 @@ body#store_donate li#t_store_donate a,
 body#report_index                   li#t_report_index a,  
 body#box_office_walkup	            li#t_box_office_walkup a,
 body#options_edit                   li#t_options_edit a,
-body#shows_list						li#t_shows_list a,
-body#shows_edit						li#t_shows_list a,
-body#showdates_edit					li#t_shows_list a,
-body#vouchertypes_list				li#t_vouchertypes_list a,
-body#vouchertypes_edit				li#t_vouchertypes_list a,
-body#donation_list 					li#t_donation_list a {
-        background-color: #433637;
-        color: #e7e7e7;
-}
+body#shows_index						li#t_shows_index a,
+body#shows_edit						li#t_shows_index a,
+body#showdates_edit					li#t_shows_index a,
+body#vouchertypes_index				li#t_vouchertypes_index a,
+body#vouchertypes_edit				li#t_vouchertypes_index a,
+body#donations_index					li#t_donations_index a,
 ul.a1-nav .active-tab {
     background-color: #433637;
     color: #e7e7e7;
@@ -170,9 +168,9 @@ ul.a1-nav .active-tab {
 
 /* "show my tickets" page */
 .showName {
-        font-weight: bold;
-        color:  maroon;
-        line-height: 1.4
+    font-weight: bold;
+    color:  maroon;
+    line-height: 1.4
 }
 
 /* 
@@ -180,14 +178,14 @@ ul.a1-nav .active-tab {
  */
 
 .storeBanner {
-  background-color: maroon;
-  color: white;
-  padding: 5px;
-  margin: 4px;
-  text-align: center;
-	font: italic large Georgia, "Times New Roman", Times, serif;
+    background-color: maroon;
+    color: white;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
+    font: italic large Georgia, "Times New Roman", Times, serif;
 }
 
 .storeBanner a {
-  color: yellow;
+    color: yellow;
 }
