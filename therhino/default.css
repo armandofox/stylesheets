@@ -123,10 +123,6 @@ body#donation_list li#t_donation_list a {
  border-top: 2px solid #b6120d;
 }
 
-#homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
-  display: inline-block;
-  margin: 10px 0 8px 0; }
-
 /* text links */
 a {
   text-decoration: none;
@@ -135,10 +131,6 @@ a {
     text-decoration: underline; }
 
 /* basic paragraphs and headers */
-
-pre {
-  padding: 10px;
-  font-family: Monaco,Courier,fixed; }
 
 strong, .strong {
   font-weight: bold;
@@ -152,23 +144,6 @@ fieldset {
 /* 
  * Utility styles - these are used in various places so don't delete
  */
-
-.currency {
-  text-align: right; }
-
-.indented {
-  margin: 5px 0 5px 150px;
-  padding: 0; }
-
-.t {
-  vertical-align: top; }
-
-.small {
-  font-size: 0.8em; }
-
-.orderRow {
-  padding: 1ex 0 1ex 0;
-}
 
 .explain {
   border: 1px solid #8d3127;

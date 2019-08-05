@@ -36,18 +36,6 @@ strong, .strong {
  * Utility styles - these are used in various places so don't delete
  */
 
-.currency {
-  text-align: right;
-}
-.indented {
-  margin: 5px 0 5px 150px;
-  padding: 0;
-}
-.t { vertical-align: top; }
-
-.small {
-  font-size: 0.8em;
-}
 .explain {
   border: 1px solid #8d3127;
   background: white;
@@ -175,16 +163,6 @@ ul.a1-nav .active-tab {
     background-color: #433637;
     color: #e7e7e7;
 }
-
-/*
- * Welcome banner elements
- */
-
-#homepage_ticket_sales_text, #homepage_subscription_sales_text, .new_account {
-	display: inline-block;
-	margin: 10px 0 8px 0;
-}
-
 
 /************************
  * Page-specific styles 
