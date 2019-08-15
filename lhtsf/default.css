@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200');
+
+@media (min-device-width: 800px) {
+    html {
+        font-size: 14pt;
+    }
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: light;
+    color: white;
+    background-color: #511211;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: white;
+}
+
+
+fieldset {
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid white;
+}
+
+/*
+ *  Classes to apply to generic elements
+ */
+
+strong, .strong {
+    font-weight: bold;
+    color: red;
+}
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.explain {
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top;
+}
+
+/*
+ * Page structure: 
+ *  outer_wrapper
+ *    outer_header
+ *    inner_wrapper (main content of page)
+ *      header  (your organization's banner, etc)
+ *      nav     (nav tabs bar)
+ *      content (main page)
+ *  footer    (Audience1st footer)
+ */
+
+#outer_wrapper {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #511211;
+}
+
+/*
+#inner_wrapper {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+*/
+
+#header {
+    width:  100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+@media(min-device-width: 900px) {
+    #header {
+        height: 207px;
+        background-image: url('./lhtsf_logo.png');
+        background-position: 40px 3px;
+    }
+}
+@media(max-width: 480px) {
+    #header {
+        /* small image here? */
+    }
+}
+#footer {
+    width: 100%;
+    background-color: #262626;
+    height: 126px;
+}
+#footer p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 125%;
+    padding-top: 40px;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+*/
+
+#themed-nav {
+    background-color: #511211;
+    width: 100%;
+    display: inline-block;
+}
+
+ul.a1-nav {
+    padding-left: 0; 
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+    display: block;
+    list-style: none;
+}
+ul.a1-nav li {
+    float:  left;
+}
+
+ul.a1-nav li a {
+    margin: 0 5px 0 5px;
+    padding: 18px 5px 3px 5px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color:  white;
+    background-color: #511211;
+    border-top: 1px solid white;
+    height: 6ex;
+}
+
+ul.a1-nav li a:hover {
+    color: blue;
+    border-top: 1px solid blue;
+}
+
+/* override nav tab color when tab selected */
+body#store_index                    li#t_store_index a, 
+body#customers_index                li#t_customers_index a,
+body#customers_show                 li#t_customers_show a, 
+body#customers_edit                 li#t_customers_edit a, 
+body#customers_change_password_for      li#t_customers_change_password_for a,
+body#store_donate li#t_store_donate a,
+body#report_index                   li#t_report_index a,  
+body#box_office_walkup	            li#t_box_office_walkup a,
+body#options_edit                   li#t_options_edit a,
+body#shows_index						li#t_shows_index a,
+body#shows_edit						li#t_shows_index a,
+body#showdates_edit					li#t_shows_index a,
+body#vouchertypes_index				li#t_vouchertypes_index a,
+body#vouchertypes_edit				li#t_vouchertypes_index a,
+body#donations_index					li#t_donations_index a,
+ul.a1-nav .active-tab {
+    color: #c89869;
+    font-style: italic;
+    border-top: 1px solid #c89869;
+
+}
+
+/************************
+ * Page-specific styles 
+ ************************/
+
+/* "show my tickets" page */
+.showName {
+    font-weight: bold;
+    color:  white;
+    line-height: 1.4
+}
+
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+
+.storeBanner {
+    background-color: maroon;
+    color: white;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
+}
+
+.storeBanner a {
+    color: #c89869;
+}
