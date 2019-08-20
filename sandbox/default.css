@@ -1,1 +1,191 @@
-/* empty */
+@import url('https://fonts.googleapis.com/css?family=Assistant:300&display=swap');
+
+/*
+ * Page structure: 
+ * body
+ *  #outer_wrapper
+ *    #outer_header
+ *    #inner_wrapper (main content of page)
+ *      #header  (your organization's banner, etc)
+ *      .nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *      #content (main page content)
+ *      #welcome_header (login/logout buttons)
+ *  #footer    (Audience1st footer)
+ */
+@media (min-device-width: 800px) {
+    html {
+        font-size: 11pt;
+    }
+}
+
+body {
+    color: #222;
+    font-family: 'Assistant', sans-serif ;
+    font-size: 12pt;
+    background-image: url(./gradient_squares.png);
+    background-color: #838383;
+}
+
+@media (min-device-width: 800px) {
+    #outer_wrapper {
+        line-height: 1;
+        background: white;
+        width: auto;
+        margin: 0 100px 0 100px;
+    }
+}
+
+#outer_wrapper {
+    margin: 20px auto;
+    padding: 0;
+    width: 900px;
+    border: 1px solid #EEE;
+    background-color: white;
+    height:  100%;
+}
+#inner_wrapper {
+    margin: 0;
+    padding: 10px 0 10px 0;
+    overflow: auto;
+    background-color: whitesmoke;
+    border: 2px groove ;
+    border-style: groove;
+}
+#header {
+    background: url(./logo.png) top center no-repeat;
+    height: 70px;
+    /* for CSS3, this should be background-height */
+    width: 100%;
+    display: inline-block;
+    text-align: left; }
+
+#content {
+    padding: 0;
+    margin: 0;
+}
+#footer {
+    margin: 0;
+    font-style: italic;
+    padding: 20px;
+    color:  #888;
+    background-color: #eee;
+}
+#footer a {
+    color:  rgba(120,0,40,.3);
+    font-weight: bold;
+    text-decoration:  underline;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+*/
+ul.a1-nav {
+    background-color: #780028;
+    float: left;
+    width: 100%;
+    list-style: none;
+    border-top: 1px solid #bbb;
+    border-bottom: none;
+    margin-bottom: none !important;
+    padding-bottom: none !important;
+
+}
+ul.a1-nav li {
+    float: left;
+}
+ul.a1-nav li a {
+    font-size: 11pt;
+    color: white;
+    background-color: #780028;
+    padding: 1ex;
+    margin: 0;
+    border-right: 1px solid whitesmoke;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+ul.a1-nav li a:hover {
+    background-color: #ccc;
+    color: #780028;
+}
+
+
+ul.a1-nav .active-tab {
+    background-color: #ccc;
+    color: #780028;
+}
+
+
+/* override nav tab color when tab selected */
+body#store_index li#t_store_index a,
+body#customers_index li#t_customers_index a,
+body#customers_show li#t_customers_show a,
+body#customers_show_subscriber li#t_customers_show a,
+body#customers_edit li#t_customers_edit a,
+body#customers_change_password_for li#t_customers_change_password_for a,
+body#store_donate li#t_store_donate a,
+body#report_index li#t_report_index a,
+body#box_office_walkup li#t_box_office_walkup a,
+body#options_edit li#t_options_edit a,
+body#shows_index li#t_shows_index a,
+body#shows_edit li#t_shows_index a,
+body#showdates_edit li#t_shows_index a,
+body#vouchertypes_index li#t_vouchertypes_index a,
+body#vouchertypes_index li#t_vouchertypes_index a,
+body#donations_index li#t_donations_index a,
+ul.a1-nav .active-tab {
+    background-color: #ccc;
+    color: #780028;
+}
+
+/* text links */
+a {
+    text-decoration: none;
+    color: #c03202; }
+a:hover {
+    text-decoration: underline; }
+
+/* basic paragraphs and headers */
+
+strong, .strong {
+    font-weight: bold;
+    color: #c03202; }
+
+fieldset {
+    color: #222222;
+    border: 1px solid black;
+}
+
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.explain {
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top; }
+
+/************************
+ * Page-specific styles 
+ ************************/
+/* "show my tickets" page */
+.showName {
+    font-weight: bold;
+    color: maroon;
+    line-height: 1.4; }
+
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+.storeBanner {
+
+    color: #555;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
+    font: italic larger;
+    border-width: 4px;
+    border-style: ridge;
+}
