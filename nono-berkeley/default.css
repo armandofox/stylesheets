@@ -1,0 +1,122 @@
+/*
+ * Page structure: 
+ * body
+ *  #outer_wrapper
+ *    #outer_header
+ *    #inner_wrapper (main content of page)
+ *      #header  (your organization's banner, etc)
+ *      .a1-nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *      #content (main page content)
+ *      #welcome_header (login/logout buttons)
+ *  #footer    (Audience1st footer)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+
+html {
+    font-size: 11pt;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #002c57;
+}
+body {
+    background-color: #ffd808;
+}
+
+#outer_wrapper {
+    line-height: 1;
+    background: white;
+    width: 960px;
+    margin: 0 auto;
+    height: 100%; }
+
+#inner_wrapper {
+    background-color: white;
+    width: 960px;
+    /* change if want to do left sidebar */
+    margin: 0;
+    padding: 0 0 10px 0;
+    overflow: auto;
+    /* banner links to venue's main site */
+}
+#inner_wrapper a#top_level_banner_link {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    font-family: 'EB Garamond', serif;
+    /* to include a site logo, use 'background-image:' here */
+    font-size: 400%;
+    color: #ffd808;
+    background-color: #002c58;
+    text-shadow: 2px 2px #a89720;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+}
+
+#content {
+    padding: 0 4px;
+}
+
+#footer {
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+#footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+*/
+ul.a1-nav {
+    background-color: #ffd808;
+    border-top: 1px solid white;
+    float: left;
+    width: 100%;
+    list-style: none;
+    border-bottom: none;
+}
+ul.a1-nav li {
+    float: left;
+}
+ul.a1-nav li a {
+    color: #002c57;
+    background-color: #ffd808;
+    padding: 2ex;
+    margin: 0;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+ul.a1-nav li a:hover {
+    background-color: #ccc;
+    color: white;
+}
+
+/* override nav tab color when tab selected */
+body#store_index li#t_store_index a,
+body#customers_welcome li#t_customers_welcome a,
+body#customers_welcome_subscriber li#t_customers_welcome a,
+body#customers_edit li#t_customers_edit a,
+body#customers_change_password li#t_customers_change_password a,
+body#report_index li#t_report_index a,
+body#box_office_walkup li#t_box_office_walkup a,
+body#options_edit li#t_options_edit a,
+body#shows_list li#t_shows_list a,
+body#shows_edit li#t_shows_list a,
+body#showdates_edit li#t_shows_list a,
+body#vouchertypes_list li#t_vouchertypes_list a,
+body#vouchertypes_edit li#t_vouchertypes_list a,
+body#donation_list li#t_donation_list a {
+    background-color: #777;
+}
+
