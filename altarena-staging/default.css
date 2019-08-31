@@ -10,6 +10,7 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     color: black;
     background-color: #671e22;
+    border: 8px dashed yellow;
 }
 
 h1, h2, h3 {
