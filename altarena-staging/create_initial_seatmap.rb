@@ -1,4 +1,4 @@
-Seatmap.create!(
+Seatmap.new(
   :image_url => 'https://cdn.jsdelivr.net/gh/armandofox/stylesheets@master/altarena-staging/seatmap_1.png',
   :name => 'Altarena default',
   :csv => %q{,,,,,,D301,D302,D303,D304,,,D305,D306,D307,D308,,,,A412,A512,A614
