@@ -137,8 +137,8 @@ ul.a1-nav li a {
 }
 
 ul.a1-nav li a:hover {
-    color: blue;
-    border-top: 1px solid blue;
+    color: #c89869;
+    border-top: 1px solid #c89869;
 }
 
 /* override nav tab color when tab selected */
