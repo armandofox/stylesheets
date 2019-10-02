@@ -35,10 +35,6 @@ fieldset {
     background-color: #bc8d61;
 }
 
-a {
-    color: lightBlue;
-}
-
 strong, .strong {
     font-weight: bold;
     color: yellow;
@@ -177,6 +173,12 @@ ul.a1-nav .active-tab {
 /************************
  * Page-specific styles 
  ************************/
+
+/* checkout/billing */
+
+.a1-cart-show-name, .a1-cart-show-date {
+    color: #0070ff;
+}
 
 /* "show my tickets" page */
 .showName {
