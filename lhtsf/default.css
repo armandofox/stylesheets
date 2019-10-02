@@ -29,9 +29,19 @@ fieldset {
  *  Classes to apply to generic elements
  */
 
+/* a few overrides to Bootstrap's defaults, because of color scheme */
+
+.card-header {
+    background-color: #bc8d61;
+}
+
+a {
+    color: lightBlue;
+}
+
 strong, .strong {
     font-weight: bold;
-    color: red;
+    color: yellow;
 }
 /* 
  * Utility styles - these are used in various places so don't delete
