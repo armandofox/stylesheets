@@ -68,8 +68,8 @@ strong, .strong {
     padding: 0;
     background-color: #511211;
 }
-@media (min-device-width: 1024px) {
-    #outer_wrapper { width: 960px; }
+@media (min-device-width: 1100px) {
+    #outer_wrapper { width: 1024px; }
 }
 
 #inner_wrapper {
