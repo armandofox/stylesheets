@@ -1,34 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Merriweather');
 
-@media (min-device-width: 800px) {
-    html {
-        font-size: 12pt;
-    }
-}
-
-body {
+.themed {
     font-family: "Source Sans Pro", sans-serif;
     color: black;
     background-color: #671e22;
 }
 
-h1, h2, h3 {
+.themed h1, .themed h2, .themed h3 {
     font-weight: bold;
     color: maroon;
 }
 
-
-fieldset {
+.themed fieldset {
     padding: 10px;
     margin: 2px;
     border: 1px solid black;
+}
+#content.themed {
+    background-color: white;
+    font-size: larger;
 }
 
 /*
  *  Classes to apply to generic elements
  */
 
-strong, .strong {
+.themed strong, .themed .strong {
     font-weight: bold;
     color: red;
 }
@@ -47,7 +44,6 @@ strong, .strong {
 /*
  * Page structure: 
  *  outer_wrapper
- *    outer_header
  *    inner_wrapper (main content of page)
  *      header  (your organization's banner, etc)
  *      nav     (nav tabs bar)
@@ -55,20 +51,21 @@ strong, .strong {
  *  footer    (Audience1st footer)
  */
 #outer_wrapper {
-    margin: 0 auto;
+    width: 100%;
     padding: 0;
-    background-color: white;
+    margin: 0;
+    background-color: #69131c;
 }
-@media (min-device-width: 1100px) {
-    #outer_wrapper { width: 1100px; }
-}
-
 
 #inner_wrapper {
-    margin: 0;
-    padding: 4px;
+    margin: 0 auto;
+    padding: 0 4px;
     overflow: auto;
 }
+@media (min-device-width: 1036px) {
+    #inner_wrapper { width: 1036px; }
+}
+
 
 #header {
     width:  100%;
@@ -78,7 +75,7 @@ strong, .strong {
 }
 @media(min-device-width: 900px) {
     #header {
-        height: 267px;
+        height: 188px;
         background-image: url('./altarena_banner_2017.png');
     }
 }

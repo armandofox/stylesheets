@@ -1,61 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:200');
 
-@media (min-device-width: 800px) {
-    html {
-        font-size: 12t;
-    }
-}
-
-body {
-    font-family: "Nunito", sans-serif;
-    font-weight: light;
-    color: white;
-    background-color: #511211;
-}
-
-h1, h2, h3 {
-    font-weight: bold;
-    color: white;
-    font-size: 175%;
-}
-
-
-fieldset {
-    padding: 10px;
-    margin: 2px;
-    border: 1px solid white;
-}
-
-/*
- *  Classes to apply to generic elements
- */
-
-/* a few overrides to Bootstrap's defaults, because of color scheme */
-
-.card-header {
-    background-color: #bc8d61;
-}
-
-strong, .strong {
-    font-weight: bold;
-    color: yellow;
-}
-/* 
- * Utility styles - these are used in various places so don't delete
- */
-
-.explain {
-    border: 1px solid #8d3127;
-    background: white;
-    padding: 2px 2px;
-    margin: 2px 2px;
-    vertical-align: top;
-}
-
 /*
  * Page structure: 
  *  outer_wrapper
- *    outer_header
  *    inner_wrapper (main content of page)
  *      header  (your organization's banner, etc)
  *      nav     (nav tabs bar)
@@ -64,23 +11,20 @@ strong, .strong {
  */
 
 #outer_wrapper {
-    margin: 0 auto;
+    width: 100%;
     padding: 0;
     background-color: #511211;
 }
-@media (min-device-width: 1100px) {
-    #outer_wrapper { width: 1024px; }
-}
 
 #inner_wrapper {
-    margin: 0;
-    padding: 4px;
+    width: 100%;
+    padding: 20px;
     overflow: auto;
 }
 
 #header {
-    width:  100%;
-    margin: 0;
+    min-width: 960px;
+    margin: 0 auto;
     padding: 0;
     background-repeat: no-repeat;
 }
@@ -108,6 +52,54 @@ strong, .strong {
     font-size: 125%;
     padding-top: 40px;
 }
+
+.themed {
+    font-family: "Nunito", sans-serif;
+    font-size: larger;
+    font-weight: light;
+    color: white;
+    background-color: #511211;
+}
+
+.themed h1, .themed h2, .themed h3 {
+    font-weight: bold;
+    color: white;
+    font-size: 175%;
+}
+
+
+.themed fieldset {
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid white;
+}
+
+/*
+ *  Classes to apply to generic elements
+ */
+
+/* a few overrides to Bootstrap's defaults, because of color scheme */
+
+.themed .card-header {
+    background-color: #bc8d61;
+}
+
+.themed strong, .themed .strong {
+    font-weight: bold;
+    color: #fed94e;
+}
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.explain {
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top;
+}
+
 
 /* Navigation tabs - don't mess with these unless you know what you're
    doing - it allows the UL environment to create horizontal tabs
@@ -140,13 +132,14 @@ ul.a1-nav li a {
     letter-spacing: 0.1em;
     color:  white;
     background-color: #511211;
-    border-top: 1px solid white;
+    border-top: 2px solid #511211;
     height: 6ex;
 }
 
 ul.a1-nav li a:hover {
-    color: #c89869;
-    border-top: 1px solid #c89869;
+    color: #fed94e;
+    border-top: 4px solid #fed94e;
+    height: 6ex;
 }
 
 /* override nav tab color when tab selected */
@@ -166,10 +159,9 @@ body#vouchertypes_index				li#t_vouchertypes_index a,
 body#vouchertypes_edit				li#t_vouchertypes_index a,
 body#donations_index					li#t_donations_index a,
 ul.a1-nav .active-tab {
-    color: #c89869;
-    font-style: italic;
-    border-top: 1px solid #c89869;
-
+    color: #fed94e;
+    border-top: 4px solid #fed94e;
+    height: 6ex;
 }
 
 /************************

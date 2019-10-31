@@ -4,7 +4,6 @@
  * Page structure: 
  * body
  *  #outer_wrapper
- *    #outer_header
  *    #inner_wrapper (main content of page)
  *      #header  (your organization's banner, etc)
  *      .nav     (nav tabs; 1 set if patron, 2 sets if admin)
@@ -12,30 +11,25 @@
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
  */
-@media (min-device-width: 800px) {
-    html {
-        font-size: 11pt;
-    }
-}
-
-body {
-    background-color: #e9ddfd;
+.themed {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: #981c17;
 }
 
 @media (min-device-width: 800px) {
     #outer_wrapper {
-        line-height: 1;
-        background: white;
-        width: auto;
-        margin: 0 100px 0 100px;
+        background-color: #e9ddfd;
+        padding: 50px 0 0 0;
+        margin: 0;
+        width: 100%;
     }
 }
 
 #inner_wrapper {
     background-color: white;
-    margin: 0;
-    padding: 0 0 10px 0;
+    width: 90%;
+    margin: 0 auto;
     overflow: auto;
 }
 /* banner links to venue's main site */
@@ -52,11 +46,6 @@ body {
     width: 100%;
     display: inline-block;
     text-align: left;
-}
-
-#content {
-    padding: 0 4px;
-    color: #981c17;
 }
 
 #footer {
@@ -125,19 +114,19 @@ ul.a1-nav .active-tab {
 }
 
 /* text links */
-a {
+.themed a {
     text-decoration: none;
     color: #c03202; }
-a:hover {
+.themed a:hover {
     text-decoration: underline; }
 
 /* basic paragraphs and headers */
 
-strong, .strong {
+.themed strong, .themed .strong {
     font-weight: bold;
     color: #c03202; }
 
-fieldset {
+.themed fieldset {
     color: #222222;
     border: 1px solid black;
 }
