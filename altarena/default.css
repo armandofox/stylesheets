@@ -29,18 +29,6 @@
     font-weight: bold;
     color: red;
 }
-/* 
- * Utility styles - these are used in various places so don't delete
- */
-
-.explain {
-    border: 1px solid #8d3127;
-    background: white;
-    padding: 2px 2px;
-    margin: 2px 2px;
-    vertical-align: top;
-}
-
 /*
  * Page structure: 
  *  outer_wrapper
