@@ -105,64 +105,36 @@
    doing - it allows the UL environment to create horizontal tabs
 */
 
-#themed-nav {
-    background-color: #511211;
-    width: 100%;
-    display: inline-block;
+
+ul.nav {
+    border: none;
 }
 
-ul.a1-nav {
-    padding-left: 0; 
-    margin-bottom: 0;
-    float: left;
-    width: 100%;
-    display: block;
-    list-style: none;
-}
-ul.a1-nav li {
-    float:  left;
-}
-
-ul.a1-nav li a {
+ul.nav li a {
     margin: 0 5px 0 5px;
     padding: 18px 5px 3px 5px;
-    display: block;
-    float: left;
     text-decoration: none;
     letter-spacing: 0.1em;
     color:  white;
     background-color: #511211;
-    border-top: 2px solid #511211;
-    height: 6ex;
 }
-
-ul.a1-nav li a:hover {
+ul.nav li a:hover {
+    border-top: 4px solid #fed94e;
+    padding: 15px 6px 3px 6px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+ul.nav li.active a {
     color: #fed94e;
     border-top: 4px solid #fed94e;
-    height: 6ex;
+    padding: 15px 5px 3px 1px;
+}
+ul.nav li.active a:hover {
+    border-top: 4px solid #fed94e;
+    padding: 15px 6px 3px 2px;
 }
 
-/* override nav tab color when tab selected */
-body#store_index                    li#t_store_index a, 
-body#customers_index                li#t_customers_index a,
-body#customers_show                 li#t_customers_show a, 
-body#customers_edit                 li#t_customers_edit a, 
-body#customers_change_password_for      li#t_customers_change_password_for a,
-body#store_donate li#t_store_donate a,
-body#report_index                   li#t_report_index a,  
-body#box_office_walkup	            li#t_box_office_walkup a,
-body#options_edit                   li#t_options_edit a,
-body#shows_index						li#t_shows_index a,
-body#shows_edit						li#t_shows_index a,
-body#showdates_edit					li#t_shows_index a,
-body#vouchertypes_index				li#t_vouchertypes_index a,
-body#vouchertypes_edit				li#t_vouchertypes_index a,
-body#donations_index					li#t_donations_index a,
-ul.a1-nav .active-tab {
-    color: #fed94e;
-    border-top: 4px solid #fed94e;
-    height: 6ex;
-}
 
 /************************
  * Page-specific styles 

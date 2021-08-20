@@ -29,6 +29,18 @@
     font-weight: bold;
     color: red;
 }
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.explain {
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top;
+}
+
 /*
  * Page structure: 
  *  outer_wrapper
@@ -64,12 +76,12 @@
 @media(min-device-width: 900px) {
     #header {
         height: 188px;
-        background-image: url('./altarena_banner_2017.png');
+        background-image: url('http://altarena.org/images/ALTARENA-STRONG-banner-1028.jpg');
     }
 }
 @media(max-width: 480px) {
     #header {
-        background-image: url('./altarena_banner_small.png');
+        background-image: url('http://altarena.org/images/ALTARENA-STRONG-banner-480.jpg');
     }
 }
 #footer {
@@ -89,60 +101,33 @@
    doing - it allows the UL environment to create horizontal tabs
 */
 
-#themed-nav {
-    background-color: #69131c;
-    width: 100%;
-    display: inline-block;
-}
-
-ul.a1-nav {
+ul.a1-nav  {
     font-size: 10pt;
-    padding-left: 0; 
-    margin-bottom: 0;
-    float: left;
-    width: 100%;
-    display: block;
-    list-style: none;
-    border-bottom: 1px solid white;
-}
-ul.a1-nav li {
-    float:  left;
-    border-right: 1px solid #db7141;
-}
-
-ul.a1-nav li a {
-    margin: 0;
-    padding: 3px 5px 3px 5px;
-    display: block;
-    float: left;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    color:  white;
     background-color: #69131c;
+    border-bottom: 1px solid white;
+    margin-bottom: 0;
 }
 
-ul.a1-nav li a:hover {
+ul.a1-nav li {
+    border-right: 1px solid #db7141;
+    border-bottom: 1px solid white;
+    margin: 0;
+}
+ul.a1-nav li a {
+    text-transform: uppercase;
+    color: white;
+    background-color: #69131c;
+    letter-spacing: 0.1em;
+    padding: 3px 5px 3px 5px;
+}
+ul.nav li a:hover {
     background-color: #433637;
+
 }
 
 /* override nav tab color when tab selected */
-body#store_index                    li#t_store_index a, 
-body#customers_index                li#t_customers_index a,
-body#customers_show                 li#t_customers_show a, 
-body#customers_edit                 li#t_customers_edit a, 
-body#customers_change_password_for      li#t_customers_change_password_for a,
-body#store_donate li#t_store_donate a,
-body#report_index                   li#t_report_index a,  
-body#box_office_walkup	            li#t_box_office_walkup a,
-body#options_edit                   li#t_options_edit a,
-body#shows_index						li#t_shows_index a,
-body#shows_edit						li#t_shows_index a,
-body#showdates_edit					li#t_shows_index a,
-body#vouchertypes_index				li#t_vouchertypes_index a,
-body#vouchertypes_edit				li#t_vouchertypes_index a,
-body#donations_index					li#t_donations_index a,
-ul.a1-nav .active-tab {
+
+.a1-nav li.active a {
     background-color: #433637;
     color: #e7e7e7;
 }

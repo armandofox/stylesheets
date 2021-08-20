@@ -76,64 +76,24 @@ body {
     text-decoration:  underline;
 }
 
-/* Navigation tabs - don't mess with these unless you know what you're
-   doing - it allows the UL environment to create horizontal tabs
-*/
-ul.a1-nav {
-    background-color: #780028;
-    float: left;
-    width: 100%;
-    list-style: none;
-    border-top: 1px solid #bbb;
-    border-bottom: none;
-    margin-bottom: none !important;
-    padding-bottom: none !important;
+/* Navigation tabs */
 
+ul.nav {
+    background-color: #780028;
+    width: 100%;
 }
-ul.a1-nav li {
-    float: left;
-}
-ul.a1-nav li a {
+ul.nav li {
+    border-right: 1px solid whitesmoke;
+}    
+ul.nav li a {
     font-size: 11pt;
     color: white;
-    background-color: #780028;
     padding: 1ex;
     margin: 0;
-    border-right: 1px solid whitesmoke;
-    display: block;
-    float: left;
     text-decoration: none;
 }
-ul.a1-nav li a:hover {
-    background-color: #ccc;
-    color: #780028;
-}
-
-
-ul.a1-nav .active-tab {
-    background-color: #ccc;
-    color: #780028;
-}
-
-
-/* override nav tab color when tab selected */
-body#store_index li#t_store_index a,
-body#customers_index li#t_customers_index a,
-body#customers_show li#t_customers_show a,
-body#customers_show_subscriber li#t_customers_show a,
-body#customers_edit li#t_customers_edit a,
-body#customers_change_password_for li#t_customers_change_password_for a,
-body#store_donate li#t_store_donate a,
-body#report_index li#t_report_index a,
-body#box_office_walkup li#t_box_office_walkup a,
-body#options_edit li#t_options_edit a,
-body#shows_index li#t_shows_index a,
-body#shows_edit li#t_shows_index a,
-body#showdates_edit li#t_shows_index a,
-body#vouchertypes_index li#t_vouchertypes_index a,
-body#vouchertypes_index li#t_vouchertypes_index a,
-body#donations_index li#t_donations_index a,
-ul.a1-nav .active-tab {
+ul.nav li.active a, ul.nav li a:hover {
+    border-radius: 0;
     background-color: #ccc;
     color: #780028;
 }

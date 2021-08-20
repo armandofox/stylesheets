@@ -1,30 +1,32 @@
 /*
- * Page structure: 
+ * Page structure:
  * body
  *  #outer_wrapper
  *    #outer_header
  *    #inner_wrapper (main content of page)
  *      #header  (your organization's banner, etc)
- *      .a1-nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *      .nav     (nav tabs; 1 set if patron, 2 sets if admin)
  *      #content (main page content)
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
+ * default css file: https://cdn.jsdelivr.net/gh/armandofox/stylesheets@master/nono-berkeley/default.css
  */
 
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 html {
     font-size: 11pt;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #002c57;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    color: #121313;
 }
 body {
-    background-color: #ffd808;
+    background-color: black;
 }
 
 #outer_wrapper {
-    line-height: 1;
-    background: white;
+    /*line-height: 1;*/
+    background: black;
     width: 960px;
     margin: 0 auto;
     height: 100%; }
@@ -44,23 +46,29 @@ body {
 }
 
 #header {
-    font-family: 'EB Garamond', serif;
+    /*font-family: 'EB Garamond', serif;*/
     /* to include a site logo, use 'background-image:' here */
-    font-size: 400%;
-    color: #ffd808;
-    background-color: #002c58;
-    text-shadow: 2px 2px #a89720;
-    padding: 0.5em 1em;
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
+    height: 300px;
+    background-image: url("NONOmain.png");
+    background-size: contain;
+    background-position: center center;
+    /*font-size: 400%;*/
+    /*color: #121313;*/
+    /*background-color: #fff;*/
+    /*text-shadow: 2px 2px #a89720;*/
+    padding: 16px 0px 0px 20px;
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+    /*font-style: italic;*/
+    background-repeat: no-repeat;
     width: 100%;
     display: inline-block;
     text-align: left;
 }
 
+
 #content {
-    padding: 0 4px;
+    padding: 0px 4px;
 }
 
 #footer {
@@ -71,52 +79,44 @@ body {
 #footer a {
     color: white;
     font-weight: bold;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
-/* Navigation tabs - don't mess with these unless you know what you're
-   doing - it allows the UL environment to create horizontal tabs
-*/
-ul.a1-nav {
-    background-color: #ffd808;
-    border-top: 1px solid white;
-    float: left;
-    width: 100%;
-    list-style: none;
-    border-bottom: none;
+/* Navigation tabs - based on Bootstrap's nav tabs CSS */
+
+ul.nav li a {
+    color: #777;
 }
-ul.a1-nav li {
-    float: left;
-}
-ul.a1-nav li a {
-    color: #002c57;
-    background-color: #ffd808;
-    padding: 2ex;
-    margin: 0;
-    display: block;
-    float: left;
-    text-decoration: none;
-}
-ul.a1-nav li a:hover {
-    background-color: #ccc;
-    color: white;
+ul.nav li.active a {
+    color: blue;
 }
 
-/* override nav tab color when tab selected */
-body#store_index li#t_store_index a,
-body#customers_welcome li#t_customers_welcome a,
-body#customers_welcome_subscriber li#t_customers_welcome a,
-body#customers_edit li#t_customers_edit a,
-body#customers_change_password li#t_customers_change_password a,
-body#report_index li#t_report_index a,
-body#box_office_walkup li#t_box_office_walkup a,
-body#options_edit li#t_options_edit a,
-body#shows_list li#t_shows_list a,
-body#shows_edit li#t_shows_list a,
-body#showdates_edit li#t_shows_list a,
-body#vouchertypes_list li#t_vouchertypes_list a,
-body#vouchertypes_edit li#t_vouchertypes_list a,
-body#donation_list li#t_donation_list a {
-    background-color: #777;
+#event_types .btn {
+   display: none;
 }
 
+/*lindy chages*/
+
+p.py-4{
+  display: none;
+}
+
+#regularShow_BannerNonSubscriber.storeBanner {
+  padding: 20px 20px 56px 20px;
+}
+
+/*#enter_promo_code {
+  display: none;
+}*/
+
+#show_description.explanation {
+  padding: 20px
+}
+
+.col-md-4.offset-md-4 {
+  padding: 20px
+}
+
+body#store_checkout  div#someone_else  {
+   display: none;
+}
