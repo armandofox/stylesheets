@@ -1,22 +1,15 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 /*
  * Page structure: 
  * body
  *  #outer_wrapper
  *    #inner_wrapper (main content of page)
  *      #header  (your organization's banner, etc)
- *      .nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *      #themed-nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *      #staff-nav   (staff-only-visible customer search & actions)
  *      #content (main page content)
  *      #welcome_header (login/logout buttons)
  *  #footer    (Audience1st footer)
  */
-.themed {
-    font-family: 'Bebas New', Helvetica, Arial, sans-serif;
-    font-size: larger;
-    color: #f3bb00;
-}
 
 @media (min-device-width: 800px) {
     #outer_wrapper {
@@ -37,9 +30,6 @@
 #content, .nav {
     padding-left: 1em;
 }
-/* banner links to venue's main inner */
-#site_wrapper a#top_level_banner_link {
-}
 
 #header {
     background: url(./pcp_logo.png) top left no-repeat;
@@ -52,15 +42,6 @@
     display: inline-block;
 }
 
-#footer {
-    background-color: #3e6a83;
-}
-#footer p {
-    text-align: center;
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-    color: gray;
-}
-
 /* Navigation tabs - don't mess with these unless you know what you're
    doing - it allows the UL environment to create horizontal tabs
 */
@@ -68,9 +49,10 @@
 #themed-nav a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 #themed-nav a:hover, #themed-nav .active {
-    background-color: #3e6a83;
+    color: #f3bb00;
     border-bottom: 1px solid white;
+    background-color: #3e6a83;
 }
-
