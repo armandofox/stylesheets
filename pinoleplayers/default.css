@@ -20,6 +20,10 @@
     }
 }
 
+.themed {
+    color: white;
+}
+
 #inner_wrapper {
     background-color: black;
     width: 987px;
@@ -55,4 +59,11 @@
     color: #f3bb00;
     border-bottom: 1px solid white;
     background-color: #3e6a83;
+}
+
+/* Seating chart display changes for dark background sites */
+
+.seatCharts-container, .legend-container {
+    background-color: white;
+    color: #555;
 }
