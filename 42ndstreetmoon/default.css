@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+/*
+ * Page structure: 
+ * body
+ *  #outer_wrapper
+ *    #inner_wrapper (main content of page)
+ *      #header  (your organization's banner, etc)
+ *      #page_body
+ *        #themed-nav     (nav tabs; 1 set if patron, 2 sets if admin)
+ *        #content (main page content)
+ *        #welcome_header (login/logout buttons)
+ *  #footer    (Audience1st footer)
+ */
+.themed {
+    font-family: "Reem Kufi", Verdana, Helvetica, sans-serif;
+    color: black;
+}
+
+@media (min-device-width: 800px) {
+    #outer_wrapper {
+        background-color: #00004b;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+#inner_wrapper {
+    overflow: auto;
+    width: 95%;
+}
+#page_body {
+    background-color: white;
+}
+
+/* banner links to venue's main site */
+#inner_wrapper a#top_level_banner_link {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    margin: 0 30px;
+    padding: 0;
+    background: url(./logo.png) top left no-repeat;
+    background-size: contain;
+    background-color: #00004b;
+    height: 100px;
+    background-height: 100px;
+    /* for CSS3, this should be background-height */
+    width: 100%;
+}
+
+#footer {
+    background-color: #332943;
+}
+#footer p {
+    text-align: center;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+*/
+ul.nav {
+    font-family: "Reem Kufi", sans-serif;
+    font-size: smaller;
+    text-transform: uppercase;
+    background-color: #00004b;
+    list-style: none;
+    margin-bottom: none !important;
+    border-bottom: none;
+}
+ul.nav li a {
+    font-size: 125%;
+    color: #eeda0d;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+ul.nav li a:hover {
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding-left: 11px;
+    padding-top: 11px;
+    padding-right: 11px;
+}
+
+ul.nav li.active a {
+    color: white;
+    background-color: #00004b;
+}
+ul.nav li.active a:hover {
+    color: white;
+    background-color: #00004b;
+}
+/* text links */
+.themed a {
+    text-decoration: none;
+    color: white; }
+.themed a:hover {
+    text-decoration: underline; }
+
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.explain {
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top; }
+
+/************************
+ * Page-specific styles 
+ ************************/
+/* "show my tickets" page */
+.showName {
+    font-weight: bold;
+    color: maroon;
+    line-height: 1.4; }
+
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+.storeBanner {
+    background-color: maroon;
+    color: white;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
+}
+
+.storeBanner a {
+    color: yellow; }
