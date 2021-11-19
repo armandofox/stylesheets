@@ -16,19 +16,23 @@
     font-family: "Reem Kufi", Verdana, Helvetica, sans-serif;
     color: black;
 }
+html {
+    background-color: #00004b;
+}
 
 @media (min-device-width: 800px) {
     #outer_wrapper {
         background-color: #00004b;
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
         width: 100%;
     }
 }
+body {
+    overflow: auto;
+}
 
 #inner_wrapper {
-    overflow: auto;
-    width: 95%;
 }
 #page_body {
     background-color: white;
@@ -97,12 +101,6 @@ ul.nav li.active a:hover {
     color: white;
     background-color: #00004b;
 }
-/* text links */
-.themed a {
-    text-decoration: none;
-    color: white; }
-.themed a:hover {
-    text-decoration: underline; }
 
 /* 
  * Utility styles - these are used in various places so don't delete
