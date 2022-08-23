@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Merriweather');
+
+/* make all divs have a grey-diag-stripe background as warning that this is sandbox */
+div.container {
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, #fff);
+  background-size: 50px 50px;
+}
+
+.themed {
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+    background-color: #671e22;
+}
+
+.themed h1, .themed h2, .themed h3 {
+    font-weight: bold;
+    color: maroon;
+}
+
+.themed fieldset {
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid black;
+}
+#content.themed {
+    background-color: white;
+    font-size: larger;
+}
+
+/*
+ *  Classes to apply to generic elements
+ */
+
+.themed strong, .themed .strong {
+    font-weight: bold;
+    color: red;
+}
+/* 
+ * Utility styles - these are used in various places so don't delete
+ */
+
+.explain {
+    border: 1px solid #8d3127;
+    background: white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    vertical-align: top;
+}
+
+/*
+ * Page structure: 
+ *  outer_wrapper
+ *    inner_wrapper (main content of page)
+ *      header  (your organization's banner, etc)
+ *      nav     (nav tabs bar)
+ *      content (main page)
+ *  footer    (Audience1st footer)
+ */
+#outer_wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #69131c;
+}
+
+#inner_wrapper {
+    margin: 0 auto;
+    padding: 0 4px;
+    overflow: auto;
+}
+@media (min-device-width: 1036px) {
+    #inner_wrapper { width: 1036px; }
+}
+
+
+#header {
+    width:  100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+@media(min-device-width: 900px) {
+    #header {
+        height: 188px;
+        background-image: url('https://www.altarena.org/wp-content/uploads/2022/06/ALTARENA-STRONG-banner-1028.jpg');
+    }
+}
+@media(max-width: 480px) {
+    #header {
+        background-image: url('https://www.altarena.org/wp-content/uploads/2022/06/ALTARENA-STRONG-banner-1028.jpg');
+    }
+}
+#footer {
+    width: 100%;
+    background-color: #262626;
+    height: 126px;
+}
+#footer p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 125%;
+    padding-top: 40px;
+}
+
+/* Navigation tabs - don't mess with these unless you know what you're
+   doing - it allows the UL environment to create horizontal tabs
+*/
+
+ul.a1-nav  {
+    font-size: 10pt;
+    background-color: #69131c;
+    border-bottom: 1px solid white;
+    margin-bottom: 0;
+}
+
+ul.a1-nav li {
+    border-right: 1px solid #db7141;
+    border-bottom: 1px solid white;
+    margin: 0;
+}
+ul.a1-nav li a {
+    text-transform: uppercase;
+    color: white;
+    background-color: #69131c;
+    letter-spacing: 0.1em;
+    padding: 3px 5px 3px 5px;
+}
+ul.nav li a:hover {
+    background-color: #433637;
+
+}
+
+/* override nav tab color when tab selected */
+
+.a1-nav li.active a {
+    background-color: #433637;
+    color: #e7e7e7;
+}
+
+/************************
+ * Page-specific styles 
+ ************************/
+
+/* "show my tickets" page */
+.showName {
+    font-weight: bold;
+    color:  maroon;
+    line-height: 1.4
+}
+
+/* 
+ * Specific messaging for Store and Subscribe pages
+ */
+
+.storeBanner {
+    background-color: maroon;
+    color: white;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
+    font: italic large Georgia, "Times New Roman", Times, serif;
+}
+
+.storeBanner a {
+    color: yellow;
+}
