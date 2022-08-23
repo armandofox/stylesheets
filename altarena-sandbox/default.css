@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Merriweather');
 
-/* make all divs have a grey-diag-stripe background as warning that this is sandbox */
-div.container {
-  background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, #fff);
-  background-size: 50px 50px;
-}
-
 .themed {
     font-family: "Source Sans Pro", sans-serif;
     color: black;
@@ -61,6 +55,7 @@ div.container {
     padding: 0;
     margin: 0;
     background-color: #69131c;
+    background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, #fff);
 }
 
 #inner_wrapper {
