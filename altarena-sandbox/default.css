@@ -82,12 +82,12 @@ div.container {
 @media(min-device-width: 900px) {
     #header {
         height: 188px;
-        background-image: url('https://www.altarena.org/wp-content/uploads/2022/06/ALTARENA-STRONG-banner-1028.jpg');
+        background-image: url('altarena_banner_small.png');
     }
 }
 @media(max-width: 480px) {
     #header {
-        background-image: url('https://www.altarena.org/wp-content/uploads/2022/06/ALTARENA-STRONG-banner-1028.jpg');
+        background-image: url('altarena_banner_small.png');
     }
 }
 #footer {
