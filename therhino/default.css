@@ -62,7 +62,7 @@
     padding: 0;
       
     background:
-        url(assets/venue/rhino_logo.avif) no-repeat center center,
+        url(./rhino_logo.avif) no-repeat center center,
         radial-gradient(circle at 50.223525802333214% 25.607639652055997%,
                         #430865 0%, 34.062%, rgba(67,8,101,0) 42%),
         radial-gradient(circle at 20.27343810419552% 71.8576410304134%,
