@@ -1,0 +1,46 @@
+/* option 1: no top/bottom outer padding */
+
+#outer_wrapper {
+  width: 100%;
+  background-color: #f0f2f5; /* Page background color/image */
+}
+
+#inner_wrapper {
+  min-width: 960px;  /* Minimum page width before horizontal scroll */
+  max-width: 1200px; /* Maximum width; outer_wrapper stretches beyond this */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff; /* Content area background */
+}
+
+/* option 2: framed layout with top and bottom outer padding */
+
+#outer_wrapper {
+  width: 100%;
+  background-color: #f0f2f5;
+  padding-top: 20px;    /* Space above inner_wrapper */
+  padding-bottom: 20px; /* Space below inner_wrapper */
+  box-sizing: border-box;
+}
+
+#inner_wrapper {
+  min-width: 960px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+
+/* option 3: header spans full width when window stretched horizontally */
+
+#header {
+  /* Expand to full viewport width */
+  width: 100vw;
+  
+  /* Pull header left to align with viewport edge */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

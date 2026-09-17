@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Antic+Slab|PT+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
 
 /*
  * Page structure: 
@@ -9,43 +9,68 @@
  *      .nav     (nav tabs; 1 set if patron, 2 sets if admin)
  *      #content (main page content)
  *      #welcome_header (login/logout buttons)
- *  #footer    (Audience1st footer)
+ *  #footer    (Audience1st footer)                           
  */
 .themed {
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
     font-size: larger;
-    color: #981c17;
+    color: black;
 }
 
 @media (min-device-width: 800px) {
     #outer_wrapper {
-        background-color: #e9ddfd;
-        padding: 50px 0 0 0;
+        background-color: black;
         margin: 0;
         width: 100%;
     }
 }
 
-#inner_wrapper {
-    background-color: white;
-    width: 90%;
-    margin: 0 auto;
-    overflow: auto;
+#outer_wrapper {
+  width: 100%;
+  background-color: #f0f2f5; /* Page background color/image */
 }
+
+#inner_wrapper {
+  min-width: 960px;  /* Minimum page width before horizontal scroll */
+/*  max-width: 1200px; /* Maximum width; outer_wrapper stretches beyond this */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white; /* Content area background */
+  overflow: auto;
+}
+/* have an inner_wrapper with higher specificity to override default padding from bootstrap */
+#inner_wrapper.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
 /* banner links to venue's main site */
 #inner_wrapper a#top_level_banner_link {
     margin: 0;
     padding: 0;
 }
 
+/* background: background that copies main site's gradient, then Rhino logo on top */
+
 #header {
-    background: url(./Rhino_Logo_Star_Comet_114.png) top left no-repeat;
-    margin-left: 2em;
-    height: 139px;
-    /* for CSS3, this should be background-height */
-    width: 100%;
-    display: inline-block;
-    text-align: left;
+
+    /* flow-root avoids margin collapse that can result in unwanted padding  */
+    display: flow-root;
+    margin: 0;
+    padding: 0;
+      
+    background:
+        url(assets/venue/rhino_logo.avif) no-repeat center center,
+        radial-gradient(circle at 50.223525802333214% 25.607639652055997%,
+                        #430865 0%, 34.062%, rgba(67,8,101,0) 42%),
+        radial-gradient(circle at 20.27343810419552% 71.8576410304134%,
+                        rgba(78,81,138,0) 0%, 42%, rgba(78,81,138,0) 70%),
+        radial-gradient(circle at 48.9013671875% 49.521484375%, #000000 0%, 100%,
+                        rgba(0,0,0,0) 100%);
+    background-size: auto 127px, cover;
+    height: 217px;
 }
 
 #footer {
@@ -53,57 +78,58 @@
 }
 #footer p {
     text-align: center;
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-    color: gray;
+    color: white;
+    a {
+        text-decoration: none;
+        font-style: italic;
+    }
 }
 
 /* Navigation tabs - don't mess with these unless you know what you're
    doing - it allows the UL environment to create horizontal tabs
 */
 ul.nav {
-    font-family: "Antic Slab", serif;
-    background-color: white;
+    font-family: "Arial Black",sans-serif;
+    font-weight: bold;
+    background-color: black;
     border-top: 1px solid #dfdfdf;
     list-style: none;
     margin-bottom: none !important;
     border-bottom: none;
 }
 ul.nav li a {
-    color: black;
+    color: #e93567;
     font-size: 12pt;
     padding: 10px 12px 1ex 12px;
     display: block;
     text-decoration: none;
-}
-ul.nav li a:hover {
-    color: #b6120d;
-    text-decoration: none;
-    padding: 9px 13px 1ex 13px;
-    border-top: 2px solid #b6120d;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+    :hover {
+        color: #dca238;
+        border: 1px solid #dca238;
+    }
 }
 
 ul.nav li.active a {
-    color: #b6120d;
+    color: #dca238;
     border-top: 2px solid #b6120d;
     padding-top: 9px;
+    text-decoration: none;
+    :hover {
+        border-top: 2px solid #b6120d;
+    }
 }
-ul.nav li.active a:hover {
-    border-top: 2px solid #b6120d;
-}
+
 /* text links */
 .themed a {
     text-decoration: none;
-    color: #c03202; }
+}
 .themed a:hover {
     text-decoration: underline; }
 
 /* basic paragraphs and headers */
 
 .themed strong, .themed .strong {
-    font-weight: bold;
+    font-weight: 500;
     color: #c03202; }
 
 .themed fieldset {
